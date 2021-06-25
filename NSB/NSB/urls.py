@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+<<<<<<< HEAD
 from myapp import views
 
 urlpatterns = [
@@ -25,4 +26,9 @@ urlpatterns = [
     path('user/new',views.user_create,name="user_create"),
     path('service/<int:id>', views.service_read, name="service_read"),
     path('service/new', views.service_create, name="service_create"),
+=======
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+>>>>>>> c74ca5afcb9720c62c77da1b929cdfbe82c29dd3
 ]
