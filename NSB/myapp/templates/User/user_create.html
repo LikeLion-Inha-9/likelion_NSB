@@ -1,0 +1,17 @@
+<h1>Create</h1>
+<form action="{%url 'user_create' %}" method="POST">
+
+    {%csrf_token%} 이름 :
+    <input type="text" name="name" value="{{data.name}}" /><br />
+    별명:
+    <input type="text" name="nickname" value="{{data.nickname}}" /><br />
+    이메일:
+    <input type="text" name="email" value="{{data.email}}" /><br />
+    비밀번호:
+    <input type="text" name="password" value="{{data.password}}"/><br />
+    point:
+    <input type="text" name="point" value="{{data.point}}" /><br />
+    level:
+    <input type="text" name="level" value="{{data.level}}" /><br />
+    <button type="submit">저장</button>
+</form>
