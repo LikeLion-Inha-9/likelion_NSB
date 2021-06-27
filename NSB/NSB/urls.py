@@ -27,9 +27,11 @@ urlpatterns = [
     path('user/<int:id>',views.user_read,name="user_read"),
     path('user/new',views.user_create,name="user_create"),
 
-    path('service/<int:id>', views.service_read, name="service_read"),
+    path('service/<int:s_id>', views.service_read, name="service_read"),
     path('service/new', views.service_create, name="service_create"),
 
-    path('service/<str:service_upload_id>/evalu/<int:id>', views.s_evalu_read, name="s_evalu_read"),
-    path('service/<int:id>/evalu/new', views.s_evalu_create, name="s_evalu_create"), # id가 service의 값으로 들어오는 것 같음
+    path('service/<int:s_id>/evalu/<int:e_id>', views.s_evalu_read, name="s_evalu_read"),
+    path('service/<int:s_id>/evalu/new', views.s_evalu_create, name="s_evalu_create"), # id가 service의 값으로 들어오는 것 같음
+
+    path('service/<str:service_upload_id>/evalu/<int:e_id>/comment',views.s_evalu_comment_create,name="s_evalu_comment_create"),
 ]

@@ -1,3 +1,4 @@
+from enum import unique
 from django.db import models
 from django.db.models.deletion import CASCADE
 from django.db.models.fields import CharField, TextField
@@ -24,6 +25,13 @@ class Service_upload (TimeStampModel):
         (2,'public interest'),
         (3,'creativity')
     )
+    def number():
+        no = Service_upload.objects.count()
+        if no == None:
+            return 1
+        else:
+            return no + 1
+    s_id = models.IntegerField(primary_key=True,unique= True,default=number)
     category = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     content = models.TextField()
@@ -37,6 +45,13 @@ class Service_upload (TimeStampModel):
 
 class Service_evalu_upload(TimeStampModel):
     # pk : 자동으로 증가하는 id는 django 자체적으로 존재 고로 생략
+    def number():
+        no = Service_evalu_upload.objects.count()
+        if no == None:
+            return 1
+        else:
+            return no + 1
+    e_id = models.IntegerField(primary_key=True,unique= True,default=number)
     title = CharField(max_length=50)
     content = TextField()
     user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자")
@@ -47,7 +62,14 @@ class Service_evalu_upload(TimeStampModel):
 
 class Service_evalu_comment(TimeStampModel):
     # pk : 자동으로 증가하는 id는 django 자체적으로 존재 고로 생략
+    def number():
+        no = Service_evalu_comment.objects.count()
+        if no == None:
+            return 1
+        else:
+            return no + 1
+    c_id = models.IntegerField(primary_key=True,unique= True,default=number)
     content = TextField()
     user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자")
-    service_evalu_upload_id = models.ForeignKey(Service_evalu_upload,on_delete=models.CASCADE,verbose_name="Service_upload")
+    service_evalu_upload_id = models.ForeignKey(Service_evalu_upload,on_delete=models.CASCADE,verbose_name="Service_upload",related_name="comment")
     service_upload_id = models.ForeignKey(Service_upload,on_delete=models.CASCADE,verbose_name="Service")

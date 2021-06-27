@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from .models import *
+import re
 # views.py
 
 #create하는 경우는 post하는 경우고 read하는 경우는 get하는 경우임 (물론 중간에 form action의 값을 통해서 get과 post 둘 다 가능)
@@ -82,14 +83,11 @@ def service_create(req):
             user = User.objects.get(pk=user_pk) #세션에서 값을 가져와 현재 사용자를 알아냄
             service.user_id = user
             service.save()
-            return redirect('/service/'+str(service.id))
-            #return redirect('/')
+            return redirect('/service/'+str(service.s_id))
     return render(req,'Service_upload/service_create.html')
 
-def service_read(req,id):
-
-    service_ = req.session['service']
-    service = get_object_or_404(Service_upload,pk=id)
+def service_read(req,s_id):
+    service = get_object_or_404(Service_upload,pk=s_id)
     context = {
         'data' : service,
     }
@@ -97,7 +95,7 @@ def service_read(req,id):
                                                                                 #service
 ###########################################################################################
                                                                                 # evaluation
-def s_evalu_create(req,id): 
+def s_evalu_create(req,s_id): 
     #service의 id를 받아와야함 -> service_read에서 id를 받아와야함 그래서 service_read.html에 보면 url 연결해주면서 data.id로 id를 전달받는다
     user_pk = req.session.get('user')
     if not user_pk:
@@ -112,16 +110,35 @@ def s_evalu_create(req,id):
             s_evalu.grade3 = float(req.POST['grade3'])
             # user, service_upload의 foreign key이기때문에 둘다 무조건 이렇게 가져와야함
             user = User.objects.get(pk=user_pk)
-            service = Service_upload.objects.get(pk=id)
+            service = Service_upload.objects.get(pk=s_id)
             s_evalu.service_upload_id = service
             s_evalu.user_id = user
             s_evalu.save()
-            return redirect('/service/'+str(s_evalu.service_upload_id)+'/evalu/'+str(s_evalu.id))
+            return redirect('/service/'+str(s_id)+'/evalu/'+str(s_evalu.e_id))
     return render(req,'Service_evaluation/s_evalu_create.html')
     
-def s_evalu_read(req,service_upload_id,id):
-    s_evalu = get_object_or_404(Service_evalu_upload,pk=id)
+def s_evalu_read(req,s_id,e_id):
+    s_evalu = get_object_or_404(Service_evalu_upload,pk=e_id)
+    comments = s_evalu.comment.all()
     context = {
         'data' : s_evalu,
+        'comments':comments,
     }
     return render(req,'Service_evaluation/s_evalu_read.html',context)
+
+
+def s_evalu_comment_create(req,service_upload_id,e_id):
+    user_pk = req.session.get('user')
+    if not user_pk:
+        return redirect('/login')
+    elif user_pk:
+        if req.method == 'POST':
+            s_evalu = get_object_or_404(Service_evalu_upload,pk=e_id)
+            user = User.objects.get(pk=user_pk)
+            evalu = Service_evalu_upload.objects.get(pk=e_id)
+            s_id = re.findall("\d",service_upload_id)
+            service = Service_upload.objects.get(pk=s_id[0])
+            s_evalu.comment.create(content = req.POST['comment'],user_id=user,
+            service_evalu_upload_id=evalu,service_upload_id = service)
+            return redirect('/service/'+str(s_id[0])+'/evalu/'+str(s_evalu.e_id))
+    return render(req,'Service_evaluations/s_evalu_read.html')
