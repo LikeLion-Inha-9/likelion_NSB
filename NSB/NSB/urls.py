@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-<<<<<<< HEAD
 from myapp import views
 
 urlpatterns = [
@@ -26,9 +25,12 @@ urlpatterns = [
     path('user/new',views.user_create,name="user_create"),
     path('service/<int:id>', views.service_read, name="service_read"),
     path('service/new', views.service_create, name="service_create"),
-=======
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
->>>>>>> c74ca5afcb9720c62c77da1b929cdfbe82c29dd3
+    
+    path('idea/new', views.idea_create, name="idea_create"),
+    path('idea/<int:id>', views.idea_read, name="idea_read"),
+    path('idea/comment_create/<int:id>', views.idea_comment_create, name="idea_comment_create"),
+    path('idea/update/<int:id>', views.idea_update, name="idea_update"),
+    path('idea/delete/<int:id>', views.idea_delete, name="idea_delete"),
+    path('idea/comment_update/<int:id>', views.idea_comment_update, name="idea_comment_update"),
+    path('idea/comment_delete/<int:id>', views.idea_comment_delete, name="idea_comment_delete"),
 ]

@@ -4,7 +4,8 @@ from .models import *
 
 def home(req):
     user=User.objects.all()
-    return render(req, 'home.html',{'data':user})
+    ideas=Idea_upload.objects.all()
+    return render(req, 'home.html',{'data':ideas})
 
 def check_password(checkpw,originalpw):
     if checkpw==originalpw:
@@ -83,3 +84,76 @@ def service_read(req,id):
         'data' : service
     }
     return render(req,'Service_upload/service_read.html',context)
+
+def idea_create(req):
+    user_pk = req.session.get('user')
+    if not user_pk:
+        return redirect('/login')
+    elif user_pk:
+        if req.method == 'POST':
+            idea = Idea_upload()
+            idea.category = req.POST['category']
+            idea.title = req.POST['title']
+            idea.content = req.POST['content']
+            user = User.objects.get(pk=user_pk)
+            idea.user_id = user
+            idea.save()
+            return redirect('/idea/'+str(idea.id))
+    return render(req,'Idea_upload/idea_create.html')
+
+def idea_read(req, id):
+    idea = get_object_or_404(Idea_upload, pk=id)
+    comments = idea.comment.all()
+    user_pk = req.session.get('user')
+    current_user = User.objects.get(pk=user_pk)
+    context = {
+        'data' : idea,
+        'comments' : comments,
+        'current_user' : current_user
+    }
+    return render(req,'Idea_upload/idea_read.html', context)
+
+def idea_comment_create(req, id):
+    user_pk = req.session.get('user')
+    if not user_pk:
+        return redirect('/login')
+    elif user_pk:
+        if req.method == 'POST':
+            idea = get_object_or_404(Idea_upload, pk = id)
+            user = User.objects.get(pk=user_pk)
+            idea.comment.create(content = req.POST['comment'], writer=user)
+        
+            return redirect('/idea/'+str(id))
+    return render(req,'Idea_upload/idea_read.html')
+
+def idea_update(req, id): 
+    idea = get_object_or_404(Idea_upload, pk = id)
+    if req.method == "POST":
+        idea.category = req.POST['category']
+        idea.title = req.POST['title']
+        idea.content = req.POST['content']
+
+        idea.save()
+        return redirect('/idea/'+str(id))
+    return render(req,'Idea_upload/idea_update.html',{'data' : idea}) 
+
+
+def idea_delete(req, id):
+    idea = get_object_or_404(Idea_upload, pk = id)
+    idea.delete()
+    return redirect('/')
+
+def idea_comment_update(req, id):
+    comment = get_object_or_404(Idea_evalu_comment, pk = id)
+    if req.method == "POST":
+        comment.content = req.POST['content']
+        
+        comment.save()
+        return redirect('/idea/'+str(comment.idea_upload_id.id))
+    return render(req,'Idea_upload/idea_comment_update.html',{'comment' : comment}) 
+
+def idea_comment_delete(req, id):
+    comment = get_object_or_404(Idea_evalu_comment, pk = id)
+    idea = comment.idea_upload_id.id
+    comment.delete()
+    return redirect('/idea/'+str(idea))

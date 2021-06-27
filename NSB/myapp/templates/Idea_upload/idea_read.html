@@ -1,0 +1,31 @@
+<a href="{% url 'home' %}">[메인]</a>
+<h1>{{data.title}}</h1>
+<br />
+{{data.category}}<br>
+{{data.user_id.name}}<br>
+작성일 : {{data.created}} 최종 수정일 : {{data.modified}}<br>
+{% if data.user_id.id == current_user.id %}
+    <button><a href = "{% url 'idea_update' data.id %}">글 수정</a></button>
+    <button><a href = "{% url 'idea_delete' data.id %}">글 삭제</a></button>
+{% endif %}
+
+<hr />
+<p>{{data.content}}</p>
+<form action ="{% url 'idea_comment_create' data.id %}" method="post">
+    {% csrf_token %}
+    <label for="content">댓글 : </label>
+    <input type="text" name="comment" id="content">
+    <input type="submit" value="댓글등록">
+</form>
+<hr>
+{% for c in comments %}
+<div>
+    <p>{{c.content}}</p>
+    <p>{{c.writer.name}}</p>
+    작성일 : {{c.created}}<br> 최종 수정일 : {{c.modified}}<br>
+    {% if c.writer.id == current_user.id %}
+        <button><a href = "{% url 'idea_comment_update' c.id %}">댓글 수정</a></button>
+        <button><a href = "{% url 'idea_comment_delete' c.id %}">댓글 삭제</a></button><br><br>
+    {% endif %}
+</div>
+{% endfor %}  

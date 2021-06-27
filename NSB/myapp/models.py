@@ -31,7 +31,18 @@ class Service_upload (TimeStampModel):
     evalu1 = models.IntegerField(choices=Evaluation_Standard)
     evalu2 = models.IntegerField(choices=Evaluation_Standard)
     evalu3 = models.IntegerField(choices=Evaluation_Standard)
-    user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자",primary_key=True) # 식별관계임! user가 있어야지만 해당 service가 존재할 수 있다
+    user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자") # 식별관계임! user가 있어야지만 해당 service가 존재할 수 있다
     #user_id = models.IntegerField(primary_key=True,unique=True) # 식별관계임! user가 있어야지만 해당 service가 존재할 수 있다
     
     # date값을 TimeStampModel을 상속하므로 해결
+
+class Idea_upload(TimeStampModel):
+    category = models.CharField(max_length=20, blank=False, null=False)
+    title = models.CharField(max_length=20, blank=False, null=False)
+    content = models.TextField()
+    user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자")
+
+class Idea_evalu_comment(TimeStampModel):
+    content = models.TextField()
+    idea_upload_id = models.ForeignKey(Idea_upload, on_delete=models.CASCADE, related_name="comment", verbose_name="원글")
+    writer = models.ForeignKey(User, on_delete=models.CASCADE,verbose_name="작성자", null=True) #댓글의 작성자.
