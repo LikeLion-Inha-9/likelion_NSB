@@ -3,6 +3,7 @@ from django.db import models
 from django.db.models.deletion import CASCADE
 from django.db.models.fields import CharField, TextField
 
+
 # Create your models here.
 
 class User(models.Model):
@@ -25,6 +26,7 @@ class Service_upload (TimeStampModel):
         (2,'public interest'),
         (3,'creativity')
     )
+
     def number():
         no = Service_upload.objects.count()
         if no == None:
@@ -73,3 +75,7 @@ class Service_evalu_comment(TimeStampModel):
     user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자")
     service_evalu_upload_id = models.ForeignKey(Service_evalu_upload,on_delete=models.CASCADE,verbose_name="Service_upload",related_name="comment")
     service_upload_id = models.ForeignKey(Service_upload,on_delete=models.CASCADE,verbose_name="Service")
+    user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자",primary_key=True) # 식별관계임! user가 있어야지만 해당 service가 존재할 수 있다
+    #user_id = models.IntegerField(primary_key=True,unique=True) # 식별관계임! user가 있어야지만 해당 service가 존재할 수 있다
+    
+    # date값을 TimeStampModel을 상속하므로 해결

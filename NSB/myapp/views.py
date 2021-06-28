@@ -7,6 +7,9 @@ import re
 # post의 특성상 data를 받아오는거지 줄수 없는 것임!!! {url ~~ data.id}이런식으로 url에게 값을 줄 수 없음
 # get은 data를 줄 수 있음 get 페이지에서 값을 줘서 새로운 것을 생성하기 위해서는 그 연결을 위해서 data를 줘야함
 
+# views.py
+
+
 def home(req):
     user=User.objects.all()
     return render(req, 'home.html',{'data':user})
@@ -40,9 +43,11 @@ def login(req):
             else:
                 res_data['error'] = "비밀번호가 틀렸습니다."
         return render(req,'login.html',res_data) #응답 데이터 res_data 전달
+
                                                                                 # 기본구현
 ######################################################################################
                                                                                 # user
+
 def user_create(req):
     if req.method == 'POST':
         user = User()
@@ -62,6 +67,7 @@ def user_read(req,id):
         'data' : service
     }
     return render(req,'User/user_read.html',context)
+
                                                                                 # user
 ###########################################################################################
                                                                                 # service
@@ -142,3 +148,16 @@ def s_evalu_comment_create(req,service_upload_id,e_id):
             service_evalu_upload_id=evalu,service_upload_id = service)
             return redirect('/service/'+str(s_id[0])+'/evalu/'+str(s_evalu.e_id))
     return render(req,'Service_evaluations/s_evalu_read.html')
+            user = User.objects.get(pk=user_pk)
+            service.user_id = user
+            service.save()
+            return redirect('/service/'+str(service.id))
+            #return redirect('/')
+    return render(req,'Service_upload/service_create.html')
+
+def service_read(req,id):
+    service = get_object_or_404(Service_upload,pk=id)
+    context = {
+        'data' : service
+    }
+    return render(req,'Service_upload/service_read.html',context)
