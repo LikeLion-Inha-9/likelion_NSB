@@ -1,6 +1,8 @@
+from enum import unique
 from django.db import models
 from django.db.models.deletion import CASCADE
-from django.db.models.fields import TextField
+from django.db.models.fields import CharField, TextField
+
 
 # Create your models here.
 
@@ -24,6 +26,14 @@ class Service_upload (TimeStampModel):
         (2,'public interest'),
         (3,'creativity')
     )
+
+    def number():
+        no = Service_upload.objects.count()
+        if no == None:
+            return 1
+        else:
+            return no + 1
+    s_id = models.IntegerField(primary_key=True,unique= True,default=number)
     category = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     content = models.TextField()
@@ -46,3 +56,41 @@ class Idea_evalu_comment(TimeStampModel):
     content = models.TextField()
     idea_upload_id = models.ForeignKey(Idea_upload, on_delete=models.CASCADE, related_name="comment", verbose_name="원글")
     writer = models.ForeignKey(User, on_delete=models.CASCADE,verbose_name="작성자", null=True) #댓글의 작성자.
+    user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자") # 비식별관계
+    
+    # date값을 TimeStampModel을 상속하므로 해결
+
+class Service_evalu_upload(TimeStampModel):
+    # pk : 자동으로 증가하는 id는 django 자체적으로 존재 고로 생략
+    def number():
+        no = Service_evalu_upload.objects.count()
+        if no == None:
+            return 1
+        else:
+            return no + 1
+    e_id = models.IntegerField(primary_key=True,unique= True,default=number)
+    title = CharField(max_length=50)
+    content = TextField()
+    user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자")
+    grade1 = models.FloatField(default=0.0)
+    grade2 = models.FloatField(default=0.0)
+    grade3 = models.FloatField(default=0.0)
+    service_upload_id = models.ForeignKey(Service_upload,on_delete=models.CASCADE)
+
+class Service_evalu_comment(TimeStampModel):
+    # pk : 자동으로 증가하는 id는 django 자체적으로 존재 고로 생략
+    def number():
+        no = Service_evalu_comment.objects.count()
+        if no == None:
+            return 1
+        else:
+            return no + 1
+    c_id = models.IntegerField(primary_key=True,unique= True,default=number)
+    content = TextField()
+    user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자")
+    service_evalu_upload_id = models.ForeignKey(Service_evalu_upload,on_delete=models.CASCADE,verbose_name="Service_upload",related_name="comment")
+    service_upload_id = models.ForeignKey(Service_upload,on_delete=models.CASCADE,verbose_name="Service")
+    user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자",primary_key=True) # 식별관계임! user가 있어야지만 해당 service가 존재할 수 있다
+    #user_id = models.IntegerField(primary_key=True,unique=True) # 식별관계임! user가 있어야지만 해당 service가 존재할 수 있다
+    
+    # date값을 TimeStampModel을 상속하므로 해결

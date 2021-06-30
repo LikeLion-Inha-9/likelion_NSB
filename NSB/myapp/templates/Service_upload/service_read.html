@@ -9,5 +9,8 @@
 {{data.get_evalu2_display}}
 {{data.get_evalu3_display}}
 <!-- {{data.user_id}} -->
+<!-- get 페이지에서 data의 id (service의 id를 제공해야만 url에서 그 값을 통해서 view에서 함수도 불러오고 다 할 수 있음) -->
+<a href = "{% url 's_evalu_create' data.s_id %}">upload</a> 
+
 
 <hr />

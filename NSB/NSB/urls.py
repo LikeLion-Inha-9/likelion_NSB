@@ -17,13 +17,17 @@ from django.contrib import admin
 from django.urls import path
 from myapp import views
 
+#id이런 값을 html에서 받을때 받아야함 그래야 view에 있는 함수들을 실행할 수 있다
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name="home"),
     path('login/',views.login,name="login"),
+
     path('user/<int:id>',views.user_read,name="user_read"),
     path('user/new',views.user_create,name="user_create"),
-    path('service/<int:id>', views.service_read, name="service_read"),
+
+    path('service/<int:s_id>', views.service_read, name="service_read"),
     path('service/new', views.service_create, name="service_create"),
     
     path('idea/new', views.idea_create, name="idea_create"),
@@ -33,4 +37,9 @@ urlpatterns = [
     path('idea/delete/<int:id>', views.idea_delete, name="idea_delete"),
     path('idea/comment_update/<int:id>', views.idea_comment_update, name="idea_comment_update"),
     path('idea/comment_delete/<int:id>', views.idea_comment_delete, name="idea_comment_delete"),
+  
+    path('service/<int:s_id>/evalu/<int:e_id>', views.s_evalu_read, name="s_evalu_read"),
+    path('service/<int:s_id>/evalu/new', views.s_evalu_create, name="s_evalu_create"), # id가 service의 값으로 들어오는 것 같음
+
+    path('service/<str:service_upload_id>/evalu/<int:e_id>/comment',views.s_evalu_comment_create,name="s_evalu_comment_create"),
 ]
