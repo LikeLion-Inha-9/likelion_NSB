@@ -1,0 +1,16 @@
+
+
+<form action="{%url 'idea_create' %}" method="POST">
+    {%csrf_token%}
+    <label for="category">category : </label>
+    <input type="text" name="category" id="category" value="{{data.category}}" /><br />
+    
+    <label for="title">title : </label>
+    <input type="text" name="title" id="title" value="{{data.title}}" /><br />
+    
+    <label for="content">content : </label>
+    <input type="text" name="content" id="content" value="{{data.content}}" /><br />
+
+    <button type="submit">저장</button>
+    <button type="reset">취소</button>
+</form>

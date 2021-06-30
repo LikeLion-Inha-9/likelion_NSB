@@ -29,11 +29,17 @@ urlpatterns = [
 
     path('service/<int:s_id>', views.service_read, name="service_read"),
     path('service/new', views.service_create, name="service_create"),
-
+    
+    path('idea/new', views.idea_create, name="idea_create"),
+    path('idea/<int:id>', views.idea_read, name="idea_read"),
+    path('idea/comment_create/<int:id>', views.idea_comment_create, name="idea_comment_create"),
+    path('idea/update/<int:id>', views.idea_update, name="idea_update"),
+    path('idea/delete/<int:id>', views.idea_delete, name="idea_delete"),
+    path('idea/comment_update/<int:id>', views.idea_comment_update, name="idea_comment_update"),
+    path('idea/comment_delete/<int:id>', views.idea_comment_delete, name="idea_comment_delete"),
+  
     path('service/<int:s_id>/evalu/<int:e_id>', views.s_evalu_read, name="s_evalu_read"),
     path('service/<int:s_id>/evalu/new', views.s_evalu_create, name="s_evalu_create"), # id가 service의 값으로 들어오는 것 같음
 
     path('service/<str:service_upload_id>/evalu/<int:e_id>/comment',views.s_evalu_comment_create,name="s_evalu_comment_create"),
-
-
 ]
