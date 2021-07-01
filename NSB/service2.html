@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding:100px;
+        }
+        #title{
+            text-align: center;
+        }
+        input[type=submit]{
+            background-color: #00047A;
+            color:white;
+            border-radius: 5px;
+            width:90px; height:45px; 
+            position:absolute;
+            right:100px;
+        }
+      /*  #feedback-submit{
+            position:absolute;
+            right:0px;
+        }
+    */
+        .feedback{
+            background-color:#ECECEC ;
+        }
+        textarea{
+        
+            width:500px;
+            height:180px;
+        }
+        ul li{
+            list-style: none;
+        }
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            font-size: 1.55rem;
+            line-height: 2.5rem;
+            justify-content: space-around;
+            padding: 0 0.2em;
+            text-align: center;
+            width: 5em;
+}
+        .star-rating input {
+            display: none;
+}
+        .star-rating label {
+            -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1.3px;
+            -webkit-text-stroke-color: #2b2a29;
+            cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="service">
+    <nav >
+        <h1 id="title" >알레르기 식품 알리미 서비스</h1>
+
+    </nav>
+    <br>
+    <nav name="contents"></nav>
+    <br>
+    링크 <a href=""></a>
+    <br>
+    <nav name="user">
+        <img src="" alt="" name="userIcon">
+        <nav name="userNickname">유저</nav>
+        <nav name="userEmail">user@user.com</nav>
+        <nav name="grade">등급</nav>
+    </nav>
+    </div>  
+    <div class="feedback">
+        
+            <h3>서비스의 피드백을 남겨주세요</h3>
+            <ul name="criteria">
+                <li id="c1">비즈니스
+                <div class="star-rating space-x-4 mx-auto">
+                    <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+                    <label for="5-stars" class="star pr-4">★</label>
+                    <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+                    <label for="4-stars" class="star">★</label>
+                    <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+                    <label for="3-stars" class="star">★</label>
+                    <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+                    <label for="2-stars" class="star">★</label>
+                    <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+                    <label for="1-star" class="star">★</label>
+                </div>
+                </li>
+                <li id="c2">창의성
+                    <div class="star-rating space-x-4 mx-auto">
+                        <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+                        <label for="5-stars" class="star pr-4">★</label>
+                        <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+                        <label for="4-stars" class="star">★</label>
+                        <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+                        <label for="3-stars" class="star">★</label>
+                        <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+                        <label for="2-stars" class="star">★</label>
+                        <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+                        <label for="1-star" class="star">★</label>
+                    </div>
+                    </li>
+                    <li id="c3">실용성
+                        <div class="star-rating space-x-4 mx-auto">
+                            <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+                            <label for="5-stars" class="star pr-4">★</label>
+                            <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+                            <label for="4-stars" class="star">★</label>
+                            <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+                            <label for="3-stars" class="star">★</label>
+                            <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+                            <label for="2-stars" class="star">★</label>
+                            <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+                            <label for="1-star" class="star">★</label>
+                        </div>
+                    </li>
+                    <li id="c4">기타 피드백
+                        <div><textarea></textarea></div>
+                    </li>
+            </ul>
+            <p><input type="submit" value="피드백하기" id="feedback-submit"></p>
+    </div>
+
+</body>
+</html>
