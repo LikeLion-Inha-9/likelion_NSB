@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
     padding: 0;
     margin: 0;
   }
@@ -113,3 +114,119 @@
   #chift {
     flex: 1;
   }
+=======
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #ececec;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#logo {
+  position: absolute;
+  top: 15px;
+  left: 170px;
+  color: #00047a;
+  font-size: 20px;
+}
+
+#top_menu {
+  position: absolute;
+  top: 15px;
+  right: 180px;
+}
+
+#top_menu a {
+  color: white;
+  margin-right: 40px;
+  text-decoration-line: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+img {
+  width: 100%;
+  height: 650px;
+}
+
+#login {
+  background-color: transparent;
+  padding: 1px 8px 1px 8px;
+  border-color: black;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#signup {
+  background-color: #00047a;
+  padding: 3px 8px 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+#introduction1 {
+  position: absolute;
+  right: 650px;
+  top: 170px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#introduction2 {
+  position: absolute;
+  right: 850px;
+  top: 234px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00047a;
+}
+
+#start {
+  position: relative;
+  bottom: 385px;
+  left: 390px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  border-color: black;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+section {
+  margin-top: 10px;
+  margin-left: 210px;
+}
+
+footer {
+  background-color: #00047a;
+  width: auto;
+  height: 120px;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+#ftdiv {
+  position: relative;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+
+#parft {
+  display: flex;
+  margin-left: 100px;
+}
+
+#chift {
+  flex: 1;
+}
+>>>>>>> 7db3eb19bb8b4f8cb9fb8ff7bed0fecf3546249e
