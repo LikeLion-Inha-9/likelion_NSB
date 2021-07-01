@@ -12,106 +12,101 @@
 </head>
 <body>
     <header>
-        <img src="mainphoto.png">
         <div id="logo" style="font-weight: bold;">
-            NSB
+            너생밖
+        </div>
+        <div id="sublogo" >
+            |    IDEA
         </div>
         <div id="top_menu">
             <a href="#">SERVICE</a>
             <a href="#">IDEA</a>
-            <button id="login">로그인</button>
-            <button id="signup">회원가입</button>
+            <i class="fa fa-bell"></i>
+            <i class="fa fa-user" style="font-size:18px;"></i>
         </div>
-        <div id="introduction1">
-            내가 만든 서비스, 사람들의 피드백을 받고 싶다면<br/>
-            새로 개발된 서비스를 사용해보고 싶다면
-        </div>
-        <div id="introduction2">
-            너의 생각을 세상 밖으로
-        </div>
-        <button id="start">서비스 소개</button>
     </header>
-    <nav class="service">
-    <nav >
-        <h1 id="title" >알레르기 식품 알리미 서비스</h1>
-
-    </nav>
-    <br>
-    <nav class="contents"></nav>
-    <br>
-    링크 <a href=""></a>
-    <br>
     <hr>
-    <nav class="user">
-        <img src="img.png" alt="" name="userIcon" id="userImg">
-        <nav name="userNickname">유저</nav>
-        <nav name="userEmail">user@user.com</nav>
-        <br>
-        <nav name="grade">등급</nav>
+
+    <nav>
+        <span>서비스 업로드</span>
     </nav>
-    </nav>  
-    <nav class="feedback">      
-            <h4>서비스의 피드백을 남겨주세요</h4>
-            <nav class="criteria">
-                <hr>
-                <h4 id="c1" >비즈니스</h4>
-                <div class="star-rating space-x-4 mx-auto">
-                    <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-                    <label for="5-stars" class="star pr-4">★</label>
-                    <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-                    <label for="4-stars" class="star">★</label>
-                    <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-                    <label for="3-stars" class="star">★</label>
-                    <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-                    <label for="2-stars" class="star">★</label>
-                    <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-                    <label for="1-star" class="star">★</label>
-                </div>
+    <hr><br/><br/>
+
+    <section>
+        <div class="service">
+            <div >
+                <h1 id="title" >알레르기 식품 알리미 서비스</h1>
+                
+            </div >
+            <br>
+            <div class="contents"></div>
+            <br>
+            링크 <a href=""></a>
+            <br>
+            <hr>
+            <div class="user">
+                <img src="img.png" alt="" name="userIcon" id="userImg">
+                <div name="userNickname">유저</div>
+                <div name="userEmail">user@user.com</div>
                 <br>
-
-                <hr>
-                <h4 id="c2">창의성</h4>   
-                <div class="star-rating space-x-4 mx-auto">
-                    <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-                    <label for="5-stars" class="star pr-4">★</label>
-                    <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-                    <label for="4-stars" class="star">★</label>
-                    <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-                    <label for="3-stars" class="star">★</label>
-                    <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-                    <label for="2-stars" class="star">★</label>
-                    <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-                    <label for="1-star" class="star">★</label>
+                <div name="grade">등급</div>
+            </div>
+            </div>  
+            <div class="feedback">      
+                    <h4>피드백 별점 평균</h4>
+                    <div class="criteria">
+                        <hr>
+                        <h4 id="c1" >비즈니스</h4>
+                        <div class="star-ratings">
+                            <div 
+                            class="star-ratings-fill space-x-2 text-lg"
+                            :style="{ width: ratingToPercent + '%' }"
+                            >
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <div class="star-ratings-base space-x-2 text-lg">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                        <br>
+        
+                        <hr>
+                        <h4 id="c2">창의성</h4>   
+                        <div class="star-ratings">
+                            <div 
+                            class="star-ratings-fill space-x-2 text-lg"
+                            :style="{ width: ratingToPercent + '%' }"
+                            >
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <div class="star-ratings-base space-x-2 text-lg">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                        <br>
+        
+                        <hr>
+                        <h4 id="c3">실용성</h4>
+                        <div class="star-ratings">
+                            <div 
+                            class="star-ratings-fill space-x-2 text-lg"
+                            :style="{ width: ratingToPercent + '%' }"
+                            >
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <div class="star-ratings-base space-x-2 text-lg">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                        <br>
+        
+                            
                 </div>
-                <br>
+            </div>
+    </section>
+    
 
-                <hr>
-                <h4 id="c3">실용성</h4>
-                <div class="star-rating space-x-4 mx-auto">
-                    <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
-                    <label for="5-stars" class="star pr-4">★</label>
-                    <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
-                    <label for="4-stars" class="star">★</label>
-                    <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
-                    <label for="3-stars" class="star">★</label>
-                    <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
-                    <label for="2-stars" class="star">★</label>
-                    <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
-                    <label for="1-star" class="star">★</label>
-                </div>
-                <br>
 
-                    <h4 id="c4">기타 피드백</h3>
-                        <div><textarea></textarea></div>
-            </ul>
-            <p><input type="submit" value="피드백하기" id="feedback-submit" onclick=rating></p>
-        </nav>
-    </nav>
-    <script>
-        function rating(){
-
-        }
-    </script>
     <footer>
         <div id="ftdiv">너의 생각을 밖으로 (너생밖)</div><br/>
         <div id="parft">
@@ -130,5 +125,11 @@
             </div>
         </div>
     </footer>
+    <script>
+        ratingToPercent() {
+      const score = +this.restaurant.averageScore * 20;
+      return score + 1.5;
+ }
+    </script>
 </body>
 </html>

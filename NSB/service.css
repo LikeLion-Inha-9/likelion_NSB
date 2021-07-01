@@ -93,7 +93,7 @@ nav{
 }
 textarea{
 
-    width:500px;
+    width:600px;
     height:180px;
     margin-left: 10px;
     margin-right:10px;
@@ -102,6 +102,8 @@ ul li{
     list-style: none;
     
 }
+
+
 .star-rating {
     display: flex;
     flex-direction: row-reverse;
@@ -129,6 +131,9 @@ ul li{
 .star-rating label:hover ~ label {
     -webkit-text-fill-color:gold;
 }
+
+
+
 #userImg{
 height:60px;
 width:60px;
@@ -154,6 +159,30 @@ margin:0px;
 }
 
 
+.star-ratings {
+    color: #aaa9a9; 
+    position: relative;
+    unicode-bidi: bidi-override;
+    width: max-content;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #2b2a29;
+}
+.star-ratings-fill {
+    color: #fff58c;
+    padding: 0;
+    position: absolute;
+    z-index: 1; /*기본 star위에 겹쳐올리기*/
+    display: flex;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-text-fill-color: gold;
+}
+.star-ratings-base {
+    z-index: 0;
+    padding: 0;
+}
 footer{ 
     background-color: #00047A;
     width: auto;
