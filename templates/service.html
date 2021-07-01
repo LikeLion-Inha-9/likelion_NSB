@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="./service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/icons/fontawesome5_icons_users_people.asp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="logo" style="font-weight: bold;">
+            너생밖
+        </div>
+        <div id="sublogo" >
+            |    IDEA
+        </div>
+        <div id="top_menu">
+            <a href="#">SERVICE</a>
+            <a href="#">IDEA</a>
+            <i class="fa fa-bell"></i>
+            <i class="fa fa-user" style="font-size:18px;"></i>
+        </div>
+    </header>
+    <hr>
+
+    <nav>
+        <span>서비스 업로드</span>
+    </nav>
+    <hr><br/><br/>
+
+    <section>
+        <div class="service">
+            <div >
+                <h1 id="title" >알레르기 식품 알리미 서비스</h1>
+        
+            </div >
+            <br>
+            <div class="contents"></div>
+            <br>
+            링크 <a href=""></a>
+            <br>
+            <hr>
+            <div class="user">
+                <i class="fa fa-user" style="font-size:65px;"></i>
+                <div name="userNickname" id="chiuser">유저</div>
+                <div name="userEmail" id="chiuser">user@user.com</div>
+                <div name="grade" id="chiuser">등급</div>
+            </div>
+            </div>  
+            <div class="feedback">      
+                    <h4>서비스의 피드백을 남겨주세요</h4>
+                    <div class="criteria">
+                        <hr id="shorthr">
+                        <h4 id="c1" >비즈니스</h4>
+                        <div class="star-rating space-x-4 mx-auto">
+                            <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+                            <label for="5-stars" class="star pr-4">★</label>
+                            <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+                            <label for="4-stars" class="star">★</label>
+                            <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+                            <label for="3-stars" class="star">★</label>
+                            <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+                            <label for="2-stars" class="star">★</label>
+                            <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+                            <label for="1-star" class="star">★</label>
+                        </div>
+                        <br>
+        
+                        <hr id="shorthr">
+                        <h4 id="c2">창의성</h4>   
+                        <div class="star-rating2 space-x-4 mx-auto" >
+                            <input type="radio" id="10-stars" name="rating" value="5" v-model="ratings" class="star2"/>
+                            <label for="10-stars" class="star pr-4" id="star2la">★</label>
+                            <input type="radio" id="9-stars" name="rating" value="4" v-model="ratings" class="star2"/>
+                            <label for="9-stars" class="star" id="star2la">★</label>
+                            <input type="radio" id="8-stars" name="rating" value="3" v-model="ratings" class="star2"/>
+                            <label for="8-stars" class="star" id="star2la">★</label>
+                            <input type="radio" id="7-stars" name="rating" value="2" v-model="ratings" class="star2"/>
+                            <label for="7-stars" class="star" id="star2la">★</label>
+                            <input type="radio" id="6-star" name="rating" value="1" v-model="ratings" class="star2"/>
+                            <label for="6-star" class="star" id="star2la">★</label>
+                        </div>
+                        <br>
+        
+                        <hr id="shorthr">
+                        <h4 id="c3">실용성</h4>
+                        <div class="star-rating space-x-4 mx-auto">
+                            <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+                            <label for="5-stars" class="star pr-4">★</label>
+                            <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+                            <label for="4-stars" class="star">★</label>
+                            <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+                            <label for="3-stars" class="star">★</label>
+                            <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+                            <label for="2-stars" class="star">★</label>
+                            <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+                            <label for="1-star" class="star">★</label>
+                        </div>
+                        <br>
+                        <hr id="shorthr">
+                            <h4 id="c4">기타 피드백</h3>
+                                <div id="textareadiv"><textarea></textarea></div>
+                    </ul>
+                </div>
+            </div>
+            <button id="feedback-submit">피드백하기</button>
+    </section>
+    <br/><br/><br/>
+
+
+    <footer>
+        <div id="ftdiv">너의 생각을 밖으로 (너생밖)</div><br/>
+        <div id="parft">
+            <div id="chift">Back-End<br/>
+                김용주님(abc@gmail.com)<br/>
+                박상준님(abc@gmail.com)
+            </div>
+            <div id="chift">Front-End<br/>
+                박준희님(abc@gmail.com)<br/>
+                소연수님(abc@gmail.com)<br/>
+                황수진님(abc@gmail.com)
+            </div>
+            <div id="chift">
+                Mentor<br/>
+                홍여진님(abc@gmail.com)
+            </div>
+        </div>
+    </footer>
+    <script>
+        function rating(){
+
+        }
+    </script>
+</body>
+</html>
