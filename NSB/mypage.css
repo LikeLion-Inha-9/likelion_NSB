@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #ececec;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.body {
+}
+.background {
+  background: #fff;
+  width: 100%;
+  height: 330px;
+  margin-top: 60px;
+  padding: 0 0 2% 0;
+}
+
+.user-info,
+.info,
+.name,
+.grade,
+.total-point,
+.required-point,
+.number,
+.bold {
+  background: #fff;
+}
+.bold {
+  font-weight: bold;
+}
+.name {
+  font-weight: 900;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+.grade,
+.total-point {
+  font-size: 16px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+}
+.required-point {
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+.info {
+  margin: 0 22%;
+}
+.icon-modify {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fas {
+  color: #00047a;
+  background: #fff;
+}
+.fa-user-alt {
+  margin: 3% 0 0 22%;
+  font-size: 66px;
+}
+.modify {
+  font-size: 14px;
+  border: none;
+  width: 80px;
+  height: 30px;
+  margin: 4% 22% 4% 0;
+  background-color: #00047a;
+  color: white;
+}
+
+/*progress bar*/
+
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  margin: 15px 0;
+  height: 25px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.progress-done {
+  background: #f2ca00;
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+
+/*서비스*/
+
+.container {
+  text-align: center;
+  margin: 4% 0 7% 0;
+}
+.card {
+  height: 400px;
+  /* width: 410px; */
+  transition: 0.3s;
+  position: relative;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 370px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 10px 25px rgba(58, 58, 58, 0.3);
+  transform: scale(1);
+}
+.card:hover {
+  transform: scale(0.95);
+}
+.img-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.596));
+  z-index: 1;
+}
+.text-wrap {
+  background-color: #fff;
+
+  position: absolute;
+  bottom: 0;
+  height: 280px;
+  z-index: 10;
+  padding: 24px;
+  text-align: left;
+}
+.text-wrap h1 {
+  background-color: #fff;
+
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.user-name {
+  background-color: #fff;
+
+  font-size: 13px;
+  color: rgb(66, 66, 66);
+  margin-bottom: 20px;
+}
+.text-wrap p {
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+.service-info {
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+.time {
+  background-color: #fff;
+}
+/*좋아요, 조회수 아이콘*/
+.icons {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  /*!!!!*/
+}
+.black {
+  color: black;
+  background-color: white;
+  font-weight: 400;
+}
+.fa-heart,
+.fa-eye {
+  font-size: 13px;
+}
+.hashtag {
+  /*!!!!*/
+  margin-top: 30px;
+  background-color: #fff;
+
+  vertical-align: bottom;
+  /* margin-top: 4px; */
+}
