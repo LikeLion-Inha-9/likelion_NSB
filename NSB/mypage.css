@@ -152,6 +152,14 @@ nav a {
 
   background-color: #00047a;
 }
+/**/
+.format {
+  margin-top: 15px;
+  float: right;
+  margin-right: 10%;
+  /* background-color: #ececec; */
+  border-width: 0;
+}
 
 .container {
   text-align: center;
