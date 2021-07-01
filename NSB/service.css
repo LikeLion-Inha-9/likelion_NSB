@@ -1,0 +1,179 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header{
+    width:auto;
+    height: 47px;
+    position: relative;
+}
+
+#logo{
+    position: absolute;
+    top: 13px;
+    left: 100px;
+    color: #00047A;
+    font-size: 20px;
+}
+
+#sublogo{
+    position: absolute;
+    top: 17px;
+    left: 180px;
+    color: gray;
+}
+
+#top_menu{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+#top_menu a{
+    color: #00047A;
+    margin-right: 30px;
+    text-decoration-line: none;
+}
+
+#top_menu i{
+    margin-right: 30px;
+    cursor: pointer;
+    color: #00047A;
+}
+
+.fa{
+    color:black
+}
+
+nav span{
+    background-color: #00047A;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding:10px 10px 10px 10px;
+    margin-left: 100px;
+}
+
+nav{
+    margin-top: -6px;
+}
+
+
+
+
+#title{
+    text-align: center;
+}
+/*input[type=submit]{
+    background-color: #00047A;
+    color:white;
+    border-radius: 5px;
+    width:80px; height:40px; 
+    float:right;
+}*/
+/*  #feedback-submit{
+    position:absolute;
+    right:0px;
+}
+*/
+
+#feedback-submit{
+    position: e;
+    background-color: #00047A;
+    color:white;
+    border-radius: 5px;
+    width:100px; height:40px; 
+    margin-right: 500px;
+}
+
+.feedback{
+    background-color:#ECECEC ;
+    height: auto;
+    padding-bottom: 100px;
+}
+textarea{
+
+    width:500px;
+    height:180px;
+    margin-left: 10px;
+    margin-right:10px;
+}
+ul li{
+    list-style: none;
+    
+}
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1.00rem;
+    line-height: 1.5rem;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    width: 5em;
+    
+}
+.star-rating input {
+    display: none;
+}
+.star-rating label {
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #2b2a29;
+    cursor: pointer;
+}
+.star-rating :checked ~ label {
+    -webkit-text-fill-color: gold;
+}
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    -webkit-text-fill-color:gold;
+}
+#userImg{
+height:60px;
+width:60px;
+float:left;
+}
+.user{
+padding-left:30px;
+padding-right:30px;
+padding-top: 20px;
+padding-bottom: 20px;
+font-size: 10px;
+}
+.feedback{
+padding-top: 20px;
+padding-bottom: 20px;
+}
+div.criteria hr{
+width:100px;
+align:left; /*여기 모르겠음*/
+}
+div.criteria h4{
+margin:0px;
+}
+
+
+footer{ 
+    background-color: #00047A;
+    width: auto;
+    height: 120px;
+    color:white;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+#ftdiv{
+    position: relative;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+#parft{
+    display: flex;
+    margin-left: 100px;
+}
+
+#chift{
+    flex:1;
+}
