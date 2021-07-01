@@ -14,11 +14,23 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap"
       rel="stylesheet"
     />
-
-    <title>mypage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>마이페이지</title>
   </head>
   <body>
-    <nav></nav>
+    <header class="header">
+      <div >
+          <a class="logo" href ="">너생밖<a>
+      </div>
+      <a href="#" class="navbar__toggleBtn">
+        <div class="menu">
+          <li><a href="#">SERVICE</a></li>
+          <li><a href="#">IDEA</a></li>   
+          <a href="#"><i class="fa fa-bell"></i></a>
+          <a href="mypage.html"><i class="fa fa-user" style="font-size:18px;"></i></a>  
+        </div>
+      </a>
+    </header>
 
     <div class="background">
       <div class="user-info">
@@ -53,6 +65,12 @@
     </div>
 
     <!--서비스 카드 UI-->
+    <nav class="nav-menu">
+        <a class="my" href="#">내 서비스</a>
+        <a class="test" href="#">테스트한 서비스</a>
+        <a class="like" href="#">관심 서비스</a>
+    </nav>
+
 
     <div class="container">
       <div class="card" id="pick">
@@ -130,6 +148,24 @@
       </div>
       
     </div>
+    <footer>
+      <div id="ftdiv">너의 생각을 밖으로 (너생밖)</div><br/>
+      <div id="parft">
+          <div id="chift">Back-End<br/>
+              김용주님(abc@gmail.com)<br/>
+              박상준님(abc@gmail.com)
+          </div>
+          <div id="chift">Front-End<br/>
+              박준희님(abc@gmail.com)<br/>
+              소연수님(abc@gmail.com)<br/>
+              황수진님(abc@gmail.com)
+          </div>
+          <div id="chift">
+              Mentor<br/>
+              홍여진님(abc@gmail.com)
+          </div>
+      </div>
+  </footer>
   </body>
   <script>
     const progress = document.querySelector(".progress-done");
