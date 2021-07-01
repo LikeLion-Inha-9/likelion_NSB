@@ -1,3 +1,4 @@
+
 body{
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -59,10 +60,20 @@ nav{
 }
 
 
-
+hr{
+    color:lightgray;
+}
 
 #title{
     text-align: center;
+    font-size:30px;
+}
+.icon{
+    color:#00047A;
+    text-align:right;
+}
+#iconnum{
+    color:black;
 }
 /*input[type=submit]{
     background-color: #00047A;
@@ -76,14 +87,18 @@ nav{
     right:0px;
 }
 */
+#hashtag{
+    color:gray;
+    text-align: center;
+    font-size: 16px;
+}
 
 #feedback-submit{
-    position: e;
     background-color: #00047A;
     color:white;
     border-radius: 5px;
     width:100px; height:40px; 
-    margin-right: 500px;
+    margin-left: 90%;
 }
 
 .feedback{
@@ -205,4 +220,41 @@ footer{
 
 #chift{
     flex:1;
+}
+
+
+
+#shorthr{
+    border-top: 3px double #bbb;
+    width: 60px;
+    margin-left:0px;
+}
+
+
+#chiuser{
+    bottom:53px;
+}
+
+.user div{
+    position: relative;
+    padding-left: 70px;
+
+}
+
+#textareadiv{
+    margin-top: 10px;
+}
+
+.feedback-guide{
+    font-size: 18px;
+}
+.crititle{
+    font-size:16px;
+}
+#betaguide{
+    font-size:16px;
+}
+#betaurl{
+    font-size:16px;
+    color:#585858;
 }

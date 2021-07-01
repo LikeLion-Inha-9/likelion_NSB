@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/icons/fontawesome5_icons_users_people.asp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/352fde3883.js"crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -34,77 +38,86 @@
 
     <section>
         <div class="service">
-            <div >
+            <div class="head">
                 <h1 id="title" >알레르기 식품 알리미 서비스</h1>
-                
+                <p id="hashtag">#알림 #AI #알레르기 #음식 #ReactNative</p>
+                <p class="icon">
+                <i class="fas fa-heart"><span id="iconnum">(좋아요 수)</span></i>&nbsp;&nbsp;
+                <i class="fas fa-eye"><span id="iconnum">(조회수)</span></i>&nbsp;&nbsp;
+                <i class="fas fa-comments"><span id="iconnum">(댓글 수)</span></i>
+                </p>
+                <hr>
             </div >
             <br>
-            <div class="contents"></div>
-            <br>
-            링크 <a href=""></a>
-            <br>
+            <div class="contents">
+
+
+            </div>
+            <hr>
+            <span id="betaguide"><strong>베타버전 링크</strong></span>&nbsp;&nbsp;
+            <a href="https://www.naver.com/" id="betaurl">www.naver.com</a>
             <hr>
             <div class="user">
-                <img src="img.png" alt="" name="userIcon" id="userImg">
-                <div name="userNickname">유저</div>
-                <div name="userEmail">user@user.com</div>
-                <br>
-                <div name="grade">등급</div>
+                <i class="fa fa-user" style="font-size:65px;"></i>
+                <div name="userNickname" id="chiuser">유저</div>
+                <div name="userEmail" id="chiuser">user@user.com</div>
+                <div name="grade" id="chiuser">등급</div>
             </div>
             </div>  
+            
             <div class="feedback">      
-                    <h4>피드백 별점 평균</h4>
-                    <div class="criteria">
-                        <hr>
-                        <h4 id="c1" >비즈니스</h4>
-                        <div class="star-ratings">
-                            <div 
-                            class="star-ratings-fill space-x-2 text-lg"
-                            :style="{ width: ratingToPercent + '%' }"
-                            >
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
-                            <div class="star-ratings-base space-x-2 text-lg">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
+                <span class="feedback-guide">피드백 별점 평균</span>
+                <div class="criteria">
+                    <hr id="shorthr">
+                    <span class="crititle" id="c1" >비즈니스</span>
+                    <div class="star-ratings">
+                        <div 
+                        class="star-ratings-fill space-x-2 text-lg"
+                        :style="{ width: ratingToPercent + '%' }"
+                        >
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                         </div>
-                        <br>
-        
-                        <hr>
-                        <h4 id="c2">창의성</h4>   
-                        <div class="star-ratings">
-                            <div 
-                            class="star-ratings-fill space-x-2 text-lg"
-                            :style="{ width: ratingToPercent + '%' }"
-                            >
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
-                            <div class="star-ratings-base space-x-2 text-lg">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
+                        <div class="star-ratings-base space-x-2 text-lg">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                         </div>
-                        <br>
-        
-                        <hr>
-                        <h4 id="c3">실용성</h4>
-                        <div class="star-ratings">
-                            <div 
-                            class="star-ratings-fill space-x-2 text-lg"
-                            :style="{ width: ratingToPercent + '%' }"
-                            >
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
-                            <div class="star-ratings-base space-x-2 text-lg">
-                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            </div>
-                        </div>
-                        <br>
-        
-                            
-                </div>
-            </div>
-    </section>
+                    </div>
+                    <br>
     
+                    <hr id="shorthr">
+                    <span class="crititle" id="c2">창의성</span>   
+                    <div class="star-ratings">
+                        <div 
+                        class="star-ratings-fill space-x-2 text-lg"
+                        :style="{ width: ratingToPercent + '%' }"
+                        >
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <div class="star-ratings-base space-x-2 text-lg">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                    <br>
+    
+                    <hr id="shorthr">
+                    <span class="crititle" id="c3">실용성</span>
+                    <div class="star-ratings">
+                        <div 
+                        class="star-ratings-fill space-x-2 text-lg"
+                        :style="{ width: ratingToPercent + '%' }"
+                        >
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <div class="star-ratings-base space-x-2 text-lg">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                    <br>
+    
+                        
+            </div>
+        </div>
+    </section>
+    <br/><br/><br/>
 
 
     <footer>
