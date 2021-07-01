@@ -1,0 +1,142 @@
+body{
+    background-color: #ECECEC;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header{
+    width:auto;
+    height: 47px;
+    position: relative;
+}
+
+#logo{
+    position: absolute;
+    top: 13px;
+    left: 100px;
+    color: #00047A;
+    font-size: 20px;
+}
+
+#sublogo{
+    position: absolute;
+    top: 17px;
+    left: 180px;
+    color: gray;
+}
+
+#top_menu{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+#top_menu a{
+    color: black;
+    margin-right: 30px;
+    text-decoration-line: none;
+}
+
+#top_menu i{
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.fa{
+    color:black
+}
+
+nav span{
+    background-color: #00047A;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding:10px 10px 10px 10px;
+    margin-left: 100px;
+}
+
+nav{
+    margin-top: -6px;
+}
+
+section{
+    margin-left: 300px;
+}
+
+
+input{
+    margin-top: 5px;
+    border: #1863b9 1px solid;
+}
+
+textarea{
+    margin-top: 5px;
+    border: #1863b9 1px solid;
+    resize: none;
+}
+
+#item{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#subitem{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 10px;
+    color:gray;
+}
+
+#chk{
+    margin-left: 13px;
+}
+
+#chk :visited{
+    color:#1863b9;
+}
+
+
+label{
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+label :visited{
+    color:#1863b9;
+}
+
+section button{
+    background-color: #00047A;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding:10px 30px 10px 30px;
+    margin-left: 200px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer{ 
+    background-color: #00047A;
+    width: auto;
+    height: 120px;
+    color:white;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+#ftdiv{
+    position: relative;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+#parft{
+    display: flex;
+    margin-left: 100px;
+}
+
+#chift{
+    flex:1;
+}
