@@ -1,79 +1,81 @@
-
-body{
-    font-family: 'Noto Sans KR', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-header{
-    width:auto;
-    height: 47px;
-    position: relative;
+header {
+  width: auto;
+  height: 47px;
+  position: relative;
 }
 
-#logo{
-    position: absolute;
-    top: 13px;
-    left: 100px;
-    color: #00047A;
-    font-size: 20px;
+#logo {
+  position: absolute;
+  top: 13px;
+  left: 100px;
+  color: #00047a;
+  font-size: 20px;
 }
 
-#sublogo{
-    position: absolute;
-    top: 17px;
-    left: 180px;
-    color: gray;
+#sublogo {
+  position: absolute;
+  top: 17px;
+  left: 180px;
+  color: gray;
 }
 
-#top_menu{
-    position: absolute;
-    top: 20px;
-    right: 10px;
+#top_menu {
+  position: absolute;
+  top: 20px;
+  right: 10px;
 }
 
-#top_menu a{
-    color: #00047A;
-    margin-right: 30px;
-    text-decoration-line: none;
+#top_menu a {
+  color: #00047a;
+  margin-right: 30px;
+  text-decoration-line: none;
 }
 
-#top_menu i{
-    margin-right: 30px;
-    cursor: pointer;
-    color: #00047A;
+#top_menu i {
+  margin-right: 30px;
+  cursor: pointer;
+  color: #00047a;
 }
 
-.fa{
-    color:black
+.fa {
+  color: black;
 }
 
-nav span{
-    background-color: #00047A;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    padding:10px 10px 10px 10px;
-    margin-left: 100px;
+nav span {
+  background-color: #00047a;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+  margin-left: 100px;
 }
 
-nav{
-    margin-top: -6px;
+nav {
+  margin-top: -6px;
 }
 
-
-hr{
-    color:lightgray;
+hr {
+  color: lightgray;
 }
 
-#title{
-    text-align: center;
-    font-size:30px;
+#title {
+  text-align: center;
+  font-size: 30px;
 }
-.icon{
-    color:#00047A;
-    text-align:right;
+.icon {
+  color: #00047a;
+  text-align: right;
 }
-#iconnum{
-    color:black;
+#iconnum {
+  color: black;
 }
 /*input[type=submit]{
     background-color: #00047A;
@@ -87,174 +89,164 @@ hr{
     right:0px;
 }
 */
-#hashtag{
-    color:gray;
-    text-align: center;
-    font-size: 16px;
+#hashtag {
+  color: gray;
+  text-align: center;
+  font-size: 16px;
 }
 
-#feedback-submit{
-    background-color: #00047A;
-    color:white;
-    border-radius: 5px;
-    width:100px; height:40px; 
-    margin-left: 93%;
+#feedback-submit {
+  background-color: #00047a;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  margin-left: 93%;
 }
 
-.feedback{
-    background-color:#ECECEC ;
-    height: auto;
-    padding-bottom: 100px;
+.feedback {
+  background-color: #ececec;
+  height: auto;
+  padding-bottom: 100px;
 }
-textarea{
-
-    width:600px;
-    height:180px;
-    margin-left: 10px;
-    margin-right:10px;
+textarea {
+  width: 600px;
+  height: 180px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-ul li{
-    list-style: none;
-    
+ul li {
+  list-style: none;
 }
-
 
 .star-rating {
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 1.00rem;
-    line-height: 1.5rem;
-    justify-content: space-around;
-    padding: 0 0.2em;
-    text-align: center;
-    width: 5em;
-    
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
 }
 .star-rating input {
-    display: none;
+  display: none;
 }
 .star-rating label {
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.3px;
-    -webkit-text-stroke-color: #2b2a29;
-    cursor: pointer;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  cursor: pointer;
 }
 .star-rating :checked ~ label {
-    -webkit-text-fill-color: gold;
+  -webkit-text-fill-color: gold;
 }
 .star-rating label:hover,
 .star-rating label:hover ~ label {
-    -webkit-text-fill-color:gold;
+  -webkit-text-fill-color: gold;
 }
 
-
-
-#userImg{
-height:60px;
-width:60px;
-float:left;
+#userImg {
+  height: 60px;
+  width: 60px;
+  float: left;
 }
-.user{
-padding-left:30px;
-padding-right:30px;
-padding-top: 20px;
-padding-bottom: 20px;
-font-size: 10px;
+.user {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 10px;
 }
-.feedback{
-padding-top: 20px;
-padding-bottom: 20px;
+.feedback {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-div.criteria hr{
-width:100px;
-align:left; /*여기 모르겠음*/
+div.criteria hr {
+  width: 100px;
+  align: left; /*여기 모르겠음*/
 }
-div.criteria h4{
-margin:0px;
+div.criteria h4 {
+  margin: 0px;
 }
-
 
 .star-ratings {
-    color: #aaa9a9; 
-    position: relative;
-    unicode-bidi: bidi-override;
-    width: max-content;
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1.3px;
-    -webkit-text-stroke-color: #2b2a29;
+  color: #aaa9a9;
+  position: relative;
+  unicode-bidi: bidi-override;
+  width: max-content;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #2b2a29;
 }
 .star-ratings-fill {
-    color: #fff58c;
-    padding: 0;
-    position: absolute;
-    z-index: 1; /*기본 star위에 겹쳐올리기*/
-    display: flex;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    -webkit-text-fill-color: gold;
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1; /*기본 star위에 겹쳐올리기*/
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: gold;
 }
 .star-ratings-base {
-    z-index: 0;
-    padding: 0;
+  z-index: 0;
+  padding: 0;
 }
-footer{ 
-    background-color: #00047A;
-    width: auto;
-    height: 120px;
-    color:white;
-    font-weight: bold;
-    font-size: 10px;
-}
-
-#ftdiv{
-    position: relative;
-    padding-left: 100px;
-    padding-top: 20px;
+footer {
+  background-color: #00047a;
+  width: auto;
+  height: 120px;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
 }
 
-#parft{
-    display: flex;
-    margin-left: 100px;
+#ftdiv {
+  position: relative;
+  padding-left: 100px;
+  padding-top: 20px;
 }
 
-#chift{
-    flex:1;
+#parft {
+  display: flex;
+  margin-left: 100px;
 }
 
-
-
-#shorthr{
-    border-top: 3px double #bbb;
-    width: 60px;
-    margin-left:0px;
+#chift {
+  flex: 1;
 }
 
-
-#chiuser{
-    bottom:53px;
+#shorthr {
+  border-top: 3px double #bbb;
+  width: 60px;
+  margin-left: 0px;
 }
 
-.user div{
-    position: relative;
-    padding-left: 70px;
-
+#chiuser {
+  bottom: 53px;
 }
 
-#textareadiv{
-    margin-top: 10px;
+.user div {
+  position: relative;
+  padding-left: 70px;
 }
 
-.feedback-guide{
-    font-size: 18px;
+#textareadiv {
+  margin-top: 10px;
 }
-.crititle{
-    font-size:16px;
+
+.feedback-guide {
+  font-size: 18px;
 }
-#betaguide{
-    font-size:16px;
+.crititle {
+  font-size: 16px;
 }
-#betaurl{
-    font-size:16px;
-    color:#585858;
+#betaguide {
+  font-size: 16px;
+}
+#betaurl {
+  font-size: 16px;
+  color: #585858;
 }
