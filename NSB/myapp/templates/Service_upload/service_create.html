@@ -1,0 +1,22 @@
+
+
+<form action="{%url 'service_create' %}" method="POST">
+    {%csrf_token%} category :
+    <input type="text" name="category" value="{{data.category}}" /><br />
+    title:
+    <input type="text" name="title" value="{{data.title}}" /><br />
+    content:
+    <input type="text" name="content" value="{{data.content}}" /><br />
+    service:
+    <input type="text" name="service" value="{{data.service}}" /><br />
+   
+    evalu1:
+    <input type="text" name="evalu1" value="{{data.evalu1}}" /><br />
+    evalu2:
+    <input type="text" name="evalu2" value="{{data.evalu2}}" /><br />
+    evalu3
+    <input type="text" name="evalu3" value="{{data.evalu3}}" /><br />
+
+
+    <button type="submit">저장</button>
+</form>

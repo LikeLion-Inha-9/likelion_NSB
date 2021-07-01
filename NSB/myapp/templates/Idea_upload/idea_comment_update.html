@@ -1,0 +1,7 @@
+<form action ="{% url 'idea_comment_update'  comment.idea_upload_id comment.c_id %}" method="post">
+    {% csrf_token %}
+    <label for="comment">댓글 : </label>
+    <input type="text" name="content" id="content" value="{{comment.content}}">
+    <button type="submit">수정</button>
+    <button type="reset">취소</button>
+</form>

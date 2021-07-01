@@ -1,0 +1,24 @@
+
+
+<br />
+{{data.title}}
+{{data.content}}
+{{data.grade1}}
+{{data.grade2}}
+{{data.grade3}}
+{{data.service_upload_id}}
+{{data.user_id}}
+
+<hr />
+<!-- data.id = service_evalu의 id data.service_upload_id = service_id -->
+<form action = "{% url 's_evalu_comment_create' data.service_upload_id data.e_id %}" method="post">
+    {% csrf_token %}
+    댓글 <input type="text" name="comment">
+    <input type="submit" value="댓글등록">
+</form>
+
+<div class ="container">
+    {% for article in comments %}
+        <h3>{{article.content}}</h3>
+    {% endfor%}
+</div>

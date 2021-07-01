@@ -1,0 +1,14 @@
+
+<!-- 메인 페이지-->
+
+<a href = "{% url 'service_create' %}">service_upload</a>
+<a href = "{% url 'idea_create' %}">idea_upload</a>
+<a href = "{% url 'user_create' %}">user_join</a>
+<a href="{%url 'login' %}">Login</a>
+
+
+<div class ="container">
+    {% for article in data %}
+        <h3><a href="{% url 'idea_read' article.i_id %}">{{article.title}}</a></h3>
+    {% endfor%}
+</div>
