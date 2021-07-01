@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+<<<<<<< HEAD
 from myapp import views
 
 #id이런 값을 html에서 받을때 받아야함 그래야 view에 있는 함수들을 실행할 수 있다
@@ -42,4 +43,5 @@ urlpatterns = [
     path('service/<int:s_id>/evalu/new', views.s_evalu_create, name="s_evalu_create"), # id가 service의 값으로 들어오는 것 같음
 
     path('service/<str:service_upload_id>/evalu/<int:e_id>/comment',views.s_evalu_comment_create,name="s_evalu_comment_create"),
+
 ]

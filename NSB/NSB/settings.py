@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'myapp',
+=======
+>>>>>>> 3e4cc3bb001287af564f41aea1c838c7139de872
 ]
 
 MIDDLEWARE = [
@@ -107,6 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'Asia/Seoul'
+
 
 USE_I18N = True
 
