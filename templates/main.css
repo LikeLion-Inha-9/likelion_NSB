@@ -1,113 +1,115 @@
-body{
-    background-color: #ECECEC;
-    font-family: 'Noto Sans KR', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-#logo{
-    position: absolute;
-    top: 15px;
-    left: 170px;
-    color:#00047A;
-    font-size: 20px;
+body {
+  background-color: #ececec;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-#top_menu{
-    position: absolute;
-    top: 15px;
-    right: 180px;
+#logo {
+  position: absolute;
+  top: 15px;
+  left: 170px;
+  color: #00047a;
+  font-size: 20px;
 }
 
-#top_menu a{
-    color: white;
-    margin-right: 40px;
-    text-decoration-line: none;
-    font-weight: bold;
-    font-size: 13px;
+#top_menu {
+  position: absolute;
+  top: 15px;
+  right: 180px;
 }
 
-img{
-    width: 100%;
-    height: 650px;
+#top_menu a {
+  color: white;
+  margin-right: 40px;
+  text-decoration-line: none;
+  font-weight: bold;
+  font-size: 13px;
 }
 
-#login{
-    background-color:transparent;
-    padding:1px 8px 1px 8px;
-    border-color: black;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
+img {
+  width: 100%;
+  height: 650px;
 }
 
-#signup{
-    background-color:#00047A;
-    padding:3px 8px 3px 8px;
-    font-size: 12px;
-    font-weight: bold;
-    border: none;
-    color: white;
-    margin-left: 7px;
-    cursor: pointer;
+#login {
+  background-color: transparent;
+  padding: 1px 8px 1px 8px;
+  border-color: black;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-#introduction1{
-    position: absolute;
-    right: 650px;
-    top: 170px;
-    font-size: 20px;
-    font-weight: bold;
+#signup {
+  background-color: #00047a;
+  padding: 3px 8px 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  margin-left: 7px;
+  cursor: pointer;
 }
 
-#introduction2{
-    position: absolute;
-    right: 850px;
-    top: 234px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #00047A;
+#introduction1 {
+  position: absolute;
+  right: 650px;
+  top: 170px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-#start{
-    position: relative;
-    bottom: 385px;
-    left: 390px;
-    padding: 6px 16px;
-    border-radius: 30px;
-    border-color: black;
-    font-size: 12px;
-    font-weight: bold;
-    background-color:transparent;
-    cursor: pointer;
+#introduction2 {
+  position: absolute;
+  right: 850px;
+  top: 234px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00047a;
 }
 
-section{
-    margin-top: 10px;
-    margin-left: 210px;
+#start {
+  position: relative;
+  bottom: 385px;
+  left: 390px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  border-color: black;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-
-
-
-footer{ 
-    background-color: #00047A;
-    width: auto;
-    height: 120px;
-    color:white;
-    font-weight: bold;
-    font-size: 10px;
+section {
+  margin-top: 10px;
+  margin-left: 210px;
 }
 
-#ftdiv{
-    position: relative;
-    padding-left: 100px;
-    padding-top: 20px;
+footer {
+  background-color: #00047a;
+  width: auto;
+  height: 120px;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
 }
 
-#parft{
-    display: flex;
-    margin-left: 100px;
+#ftdiv {
+  position: relative;
+  padding-left: 100px;
+  padding-top: 20px;
 }
 
-#chift{
-    flex:1;
+#parft {
+  display: flex;
+  margin-left: 100px;
+}
+
+#chift {
+  flex: 1;
 }
