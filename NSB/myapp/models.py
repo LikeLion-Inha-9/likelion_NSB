@@ -4,7 +4,6 @@ from django.db.models.deletion import CASCADE
 from django.db.models.fields import CharField, TextField
 
 # Create your models here.
-
 class User(models.Model):
     # pk : django 자동으로 제공하는 id 값으로 할거임
     email = models.EmailField(max_length=128)

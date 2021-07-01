@@ -12,8 +12,13 @@ import re
 
 def home(req):
     user=User.objects.all()
+    services=Service_upload.objects.all()
     ideas=Idea_upload.objects.all()
-    return render(req, 'home.html',{'data':ideas})
+    context = {
+        'services' : services,
+        'ideas' : ideas,
+    }
+    return render(req, 'home.html',context)
 
 def check_password(checkpw,originalpw):
     if checkpw==originalpw:
@@ -225,3 +230,19 @@ def idea_comment_delete(req, idea_upload_id,c_id):
     comment = get_object_or_404(Idea_evalu_comment, pk = c_id)
     comment.delete()
     return redirect('/idea/'+str(idea_upload_id))
+
+def mypage_read(req):
+    user_pk = req.session.get('user')
+    if not user_pk:
+        return redirect('/login')
+    elif user_pk:
+        current_user = User.objects.get(pk=user_pk)
+        services = Service_upload.objects.filter(user_id=user_pk)
+        services_test = Service_evalu_upload.objects.filter(user_id=user_pk)
+           
+        context = {
+            'current_user' : current_user,
+            'services' : services,
+            'services_test' : services_test,
+        }
+        return render(req,'mypage.html', context)

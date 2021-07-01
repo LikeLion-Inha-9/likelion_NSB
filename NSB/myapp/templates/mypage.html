@@ -1,0 +1,28 @@
+<!-- templates > post_read.html -->
+<a href="{% url 'home' %}">[메인]</a>
+<h1>유저정보</h1><br>
+이름 : {{current_user.name}}<br>
+닉네임 : {{current_user.nickname}}<br>
+이메일 : {{current_user.email}}<br>
+포인트 : {{current_user.point}}<br>
+레벨 : {{current_user.level}}<br><br><br>
+<hr>
+<h1>내 서비스</h1><br>
+{% for service in services %}
+<div>
+    서비스 명 : {{service.title}}<br>
+    작성자 : {{service.user_id.name}}<br>
+    서비스 내용 : {{service.content}}<br>
+    카테고리 : {{service.category}}
+</div><br><br><br>
+{% endfor %}  
+<hr>
+<h1>테스트한 서비스</h1><br>
+{% for service in services_test %}
+<div>
+    서비스 명 : {{service.service_upload_id.title}}<br>
+    작성자 : {{service.service_upload_id.user_id.name}}<br>
+    서비스 내용 : {{service.service_upload_id.content}}<br>
+    카테고리 : {{service.service_upload_id.category}}
+</div><br><br><br>
+{% endfor %}  
