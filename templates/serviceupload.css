@@ -31,7 +31,7 @@ header{
 }
 
 #top_menu a{
-    color: black;
+    color: #00047A;
     margin-right: 30px;
     text-decoration-line: none;
 }
@@ -39,6 +39,7 @@ header{
 #top_menu i{
     margin-right: 30px;
     cursor: pointer;
+    color: #00047A;
 }
 
 .fa{
