@@ -187,7 +187,7 @@ def idea_read(req, i_id):
     context = {
         'data' : idea,
         'comments' : comments,
-        'current_user' : current_user,
+        'current_user' : current_user.id,
     }
     return render(req,'Idea_upload/idea_read.html', context)
 

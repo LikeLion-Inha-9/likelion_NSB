@@ -1,4 +1,4 @@
-<form action ="{% url 'idea_comment_update'  comment.idea_upload_id comment.c_id %}" method="post">
+<form action ="{% url 'idea_comment_update'  comment.idea_upload_id.i_id comment.c_id %}" method="post">
     {% csrf_token %}
     <label for="comment">댓글 : </label>
     <input type="text" name="content" id="content" value="{{comment.content}}">
