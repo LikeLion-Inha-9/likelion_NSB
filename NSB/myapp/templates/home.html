@@ -1,17 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}" media="(min-width:600px)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="logo" style="font-weight: bold">NSB</div>
+      <div id="top_menu">
+        <a href="#">SERVICE</a>
+        <a href="#">IDEA</a>
+        <a id="button_a" href="{%url 'login' %}"><button id="login">로그인</button></a>
+        <a id="button_a" href="{% url 'user_create' %}"><button id="signup">회원가입</button></a>
+      </div>
+      <!---->
+      <div class="intro">
+        <div id="introduction1">
+          내가 만든 서비스, 사람들의 피드백을 받고 싶다면<br />
+          새로 개발된 서비스를 사용해보고 싶다면<br />
+          <span style="color: #00047a">너의 생각을 세상 밖으로</span>
+        </div>
+        
+        <a href = "{% url 'service_create' %}">
+        <button
+          type="button"
+          id="intro-btn"
+        >
+          서비스 업로드
+        </button>
+        </a>
+      </div>
+    </header>
 
-<!-- 메인 페이지-->
+    <footer>
+      <div id="ftdiv">너의 생각을 세상 밖으로 (너생밖)</div>
+      <br />
 
-<a href = "{% url 'service_create' %}">service_upload</a>
-<a href = "{% url 'idea_create' %}">idea_upload</a>
-<a href = "{% url 'user_create' %}">user_join</a>
-<a href="{%url 'login' %}">Login</a>
-<a href="{%url 'mypage' %}">Mypage</a>
-
-<div class ="container">
-    {% for article in ideas %}
-        <h3><a href="{% url 'idea_read' article.i_id %}">{{article.title}}</a></h3>
-    {% endfor%}
-    {% for article in services %}
-        <h3><a href="{% url 'service_read' article.s_id %}">{{article.title}}</a></h3>
-    {% endfor%}
-</div>
+      <div class="footer">
+        <div id="parft">
+          <div id="chift">
+            Back-End<br />
+            김용주(dydrkfsla98@naver.com)<br />
+            박상준(pcpark98@naver.com)
+          </div>
+          <div id="chift">
+            Front-End<br />
+            소연수(janu10.sys@gmail.com)<br />
+            박준희(qaz74792@gmail.com)<br />
+            황수진(sara5885@naver.com)
+          </div>
+          <div id="chift">
+            Mentor<br />
+            홍여진(hgo641@gmail.com)
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -88,9 +88,10 @@ def service_create(req):
             service.title = req.POST['title']
             service.content = req.POST['content']
             service.service = req.POST['service']
-            service.evalu1 = int(req.POST['evalu1'])
-            service.evalu2 = int(req.POST['evalu2'])
-            service.evalu3 = int(req.POST['evalu3'])
+            list=req.POST.getlist("evalu[]")
+            service.evalu1 = int(list[0])
+            service.evalu2 = int(list[1])
+            service.evalu3 = int(list[2])
             #user의 foreign key이기 때문에 무조건 이렇게 가져와야함
             user = User.objects.get(pk=user_pk) #세션에서 값을 가져와 현재 사용자를 알아냄
             service.user_id = user

@@ -20,9 +20,12 @@ class TimeStampModel(models.Model):
 class Service_upload (TimeStampModel):
     # pk : 자동으로 증가하는 id는 django 자체적으로 존재 고로 생략
     Evaluation_Standard=(    #평가 기준 논의해야함 일단 1. 상업성 2. 공익성 3. 독창성 이렇게 정의해놓음
-        (1,'commercial'),
-        (2,'public interest'),
-        (3,'creativity')
+        (1,'상업성'),
+        (2,'공익성'),
+        (3,'창의성'),
+        (4,'발전가능성'),
+        (5,'디자인'),
+        (6,'편의성'),
     )
     def number():
         no = Service_upload.objects.count()
