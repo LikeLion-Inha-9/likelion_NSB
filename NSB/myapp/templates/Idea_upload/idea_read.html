@@ -23,9 +23,9 @@
     <p>{{c.content}}</p>
     <p>{{c.user_id.name}}</p>
     작성일 : {{c.created}}<br> 최종 수정일 : {{c.modified}}<br>
-    {% if c.user_id == current_user.id %}
-        <button><a href = "{% url 'idea_comment_update' c.c_id %}">댓글 수정</a></button>
-        <button><a href = "{% url 'idea_comment_delete' c.c_id %}">댓글 삭제</a></button><br><br>
+    {% if c.user_id.id == current_user %}
+        <button><a href = "{% url 'idea_comment_update' data.i_id c.c_id %}">댓글 수정</a></button>
+        <button><a href = "{% url 'idea_comment_delete' data.i_id c.c_id %}">댓글 삭제</a></button><br><br>
     {% endif %}
 </div>
 {% endfor %}  
