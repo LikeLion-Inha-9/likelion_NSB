@@ -272,3 +272,7 @@ footer {
   line-height: 200%;
   margin-bottom: 40px;
 }
+
+pre {
+  font-family: "Noto Sans KR", sans-serif;
+}
