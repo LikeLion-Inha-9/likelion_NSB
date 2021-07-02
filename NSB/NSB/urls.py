@@ -43,4 +43,5 @@ urlpatterns = [
 
     path('service/<str:service_upload_id>/evalu/<int:e_id>/comment',views.s_evalu_comment_create,name="s_evalu_comment_create"),
 
+    path('mypage/',views.mypage_read, name="mypage"),
 ]
