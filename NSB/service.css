@@ -194,6 +194,7 @@ div.criteria h4 {
   left: 0;
   overflow: hidden;
   -webkit-text-fill-color: gold;
+  /* margin: 0 3px; */
 }
 .star-ratings-base {
   z-index: 0;
@@ -253,7 +254,8 @@ footer {
 
 .feedback-guide {
   font-size: 16px;
-  margin-bottom: 5px;
+  font-weight: 700;
+  margin-bottom: 18px;
 }
 .crititle {
   font-size: 14px;
