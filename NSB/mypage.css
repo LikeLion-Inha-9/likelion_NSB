@@ -110,6 +110,7 @@ div i {
   margin: 4% 22% 4% 0;
   background-color: #00047a;
   color: white;
+  cursor: pointer;
 }
 
 /*progress bar*/
@@ -266,10 +267,13 @@ footer {
   font-size: 10px;
   padding: 15px 0 40px 0;
 }
+.footer {
+  background-color: #00047a;
+  /* text-align: center; */
+}
 
 #ftdiv {
   background-color: #00047a;
-
   position: relative;
   padding-left: 100px;
   padding-top: 20px;
@@ -284,6 +288,5 @@ footer {
 
 #chift {
   background-color: #00047a;
-
   flex: 1;
 }
