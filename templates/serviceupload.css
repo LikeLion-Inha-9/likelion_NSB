@@ -1,142 +1,151 @@
-body{
-    background-color: #ECECEC;
-    font-family: 'Noto Sans KR', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #ececec;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-header{
-    width:auto;
-    height: 47px;
-    position: relative;
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 14px 10% 10px 10%;
+  border-bottom: 1px solid rgb(134, 134, 134);
+}
+.logo {
+  font-family: "Do Hyeon", sans-serif;
+  margin-left: 10px;
+  font-size: 30px;
+  color: #00047a;
+}
+div a,
+div i {
+  font-size: 14px;
+  font-weight: 700;
+  color: #00047a;
+  margin: 0px 12px;
+}
+div i {
+  padding-top: 12px;
+}
+.menu {
+  font-size: 20px;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.nav-menu {
+  padding: 10px 10%;
+  border-bottom: 1px rgb(196, 196, 196) solid;
+  margin-bottom: 5%;
+}
+nav a {
+  /* margin: 10px; */
+  color: rgb(68, 68, 68);
+  font-weight: 500;
+  padding: 10px;
+}
+.my {
+  color: white;
+
+  background-color: #00047a;
 }
 
-#logo{
-    position: absolute;
-    top: 13px;
-    left: 100px;
-    color: #00047A;
-    font-size: 20px;
+section {
+  margin-left: 300px;
 }
 
-#sublogo{
-    position: absolute;
-    top: 17px;
-    left: 180px;
-    color: gray;
+input {
+  margin-top: 5px;
+  border: #1863b9 1px solid;
 }
 
-#top_menu{
-    position: absolute;
-    top: 20px;
-    right: 10px;
+textarea {
+  margin-top: 5px;
+  border: #1863b9 1px solid;
+  resize: none;
 }
 
-#top_menu a{
-    color: #00047A;
-    margin-right: 30px;
-    text-decoration-line: none;
+#item {
+  font-weight: bold;
+  font-size: 14px;
 }
 
-#top_menu i{
-    margin-right: 30px;
-    cursor: pointer;
+#subitem {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 10px;
+  color: gray;
 }
 
-.fa{
-    color:#00047A;
+#chk {
+  margin-left: 13px;
 }
 
-nav span{
-    background-color: #00047A;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    padding:10px 10px 10px 10px;
-    margin-left: 100px;
+#chk :visited {
+  color: #1863b9;
 }
 
-nav{
-    margin-top: -6px;
+label {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
-section{
-    margin-left: 300px;
+label :visited {
+  color: #1863b9;
 }
 
-
-input{
-    margin-top: 5px;
-    border: #1863b9 1px solid;
+section button {
+  background-color: #00047a;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 10px 30px 10px 30px;
+  /* margin-left: 200px; */
+  border: none;
+  /* border-radius: 8px; */
+  cursor: pointer;
 }
 
-textarea{
-    margin-top: 5px;
-    border: #1863b9 1px solid;
-    resize: none;
+footer {
+  background-color: #00047a;
+  width: auto;
+  height: 120px;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 15px 0 40px 0;
+  margin-top: 50px;
+}
+.footer {
+  background-color: #00047a;
+  /* text-align: center; */
 }
 
-#item{
-    font-weight: bold;
-    font-size: 14px;
+#ftdiv {
+  background-color: #00047a;
+  position: relative;
+  padding-left: 100px;
+  padding-top: 20px;
 }
 
-#subitem{
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 10px;
-    color:gray;
+#parft {
+  background-color: #00047a;
+
+  display: flex;
+  margin-left: 100px;
 }
 
-#chk{
-    margin-left: 13px;
-}
-
-#chk :visited{
-    color:#1863b9;
-}
-
-
-label{
-    margin-top: 5px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-label :visited{
-    color:#1863b9;
-}
-
-section button{
-    background-color: #00047A;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    padding:10px 30px 10px 30px;
-    margin-left: 200px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-footer{ 
-    background-color: #00047A;
-    width: auto;
-    height: 120px;
-    color:white;
-    font-weight: bold;
-    font-size: 10px;
-}
-
-#ftdiv{
-    position: relative;
-    padding-left: 100px;
-    padding-top: 20px;
-}
-
-#parft{
-    display: flex;
-    margin-left: 100px;
-}
-
-#chift{
-    flex:1;
+#chift {
+  background-color: #00047a;
+  flex: 1;
 }

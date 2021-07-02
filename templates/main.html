@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main</title>
-    <link rel="stylesheet" href="./main.css" media="(min-width:600px)">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="./main.css" media="(min-width:600px)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <img src="mainphoto.png">
-        <div id="logo" style="font-weight: bold;">
-            NSB
-        </div>
-        <div id="top_menu">
-            <a href="#">SERVICE</a>
-            <a href="#">IDEA</a>
-            <button id="login">로그인</button>
-            <button id="signup">회원가입</button>
-        </div>
+      <div id="logo" style="font-weight: bold">NSB</div>
+      <div id="top_menu">
+        <a href="#">SERVICE</a>
+        <a href="#">IDEA</a>
+        <button id="login">로그인</button>
+        <button id="signup">회원가입</button>
+      </div>
+      <!---->
+      <div class="intro">
         <div id="introduction1">
-            내가 만든 서비스, 사람들의 피드백을 받고 싶다면<br/>
-            새로 개발된 서비스를 사용해보고 싶다면
+          내가 만든 서비스, 사람들의 피드백을 받고 싶다면<br />
+          새로 개발된 서비스를 사용해보고 싶다면<br />
+          <span style="color: #00047a">너의 생각을 세상 밖으로</span>
         </div>
-        <div id="introduction2">
-            너의 생각을 세상 밖으로
-        </div>
-        <button id="start">서비스 소개</button>
+        <button
+          type="button"
+          id="intro-btn"
+          onClick="location.href='serviceupload.html'"
+        >
+          서비스 업로드
+        </button>
+      </div>
     </header>
-    <section>
-        <div>
-            최신 서비스
-        </div>
-        <br/><br/>
-        <div>
-            인기 서비스
-        </div>
-        <br/><br/>
-    </section>
+
     <footer>
-        <div id="ftdiv">너의 생각을 밖으로 (너생밖)</div><br/>
+      <div id="ftdiv">너의 생각을 세상 밖으로 (너생밖)</div>
+      <br />
+
+      <div class="footer">
         <div id="parft">
-            <div id="chift">Back-End<br/>
-                김용주님(abc@gmail.com)<br/>
-                박상준님(abc@gmail.com)
-            </div>
-            <div id="chift">Front-End<br/>
-                박준희님(abc@gmail.com)<br/>
-                소연수님(abc@gmail.com)<br/>
-                황수진님(abc@gmail.com)
-            </div>
-            <div id="chift">
-                Mentor<br/>
-                홍여진님(abc@gmail.com)
-            </div>
+          <div id="chift">
+            Back-End<br />
+            김용주님(abc@gmail.com)<br />
+            박상준님(abc@gmail.com)
+          </div>
+          <div id="chift">
+            Front-End<br />
+            소연수님(abc@gmail.com)<br />
+            박준희님(abc@gmail.com)<br />
+            황수진님(abc@gmail.com)
+          </div>
+          <div id="chift">
+            Mentor<br />
+            홍여진님(abc@gmail.com)
+          </div>
         </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
