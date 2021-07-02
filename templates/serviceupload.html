@@ -1,114 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Service Upload</title>
-    <link rel="stylesheet" href="./serviceupload.css" media="(min-width:600px)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/icons/fontawesome5_icons_users_people.asp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="./serviceupload.css"
+      media="(min-width:600px)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/icons/fontawesome5_icons_users_people.asp"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div id="logo" style="font-weight: bold;">
-            너생밖
-        </div>
-        <div id="sublogo" >
-            |    IDEA
-        </div>
-        <div id="top_menu">
-            <a href="#">SERVICE</a>
-            <a href="#">IDEA</a>
-            <i class="fa fa-bell"></i>
-            <i class="fa fa-user" style="font-size:18px;"></i>
-        </div>
+      <div id="logo" style="font-weight: bold">너생밖</div>
+      <div id="sublogo">| IDEA</div>
+      <div id="top_menu">
+        <a href="#">SERVICE</a>
+        <a href="#">IDEA</a>
+        <i class="fa fa-bell"></i>
+        <i class="fa fa-user" style="font-size: 18px"></i>
+      </div>
     </header>
-    <hr>
+    <hr />
 
     <nav>
-        <span>서비스 업로드</span>
+      <span>서비스 업로드</span>
     </nav>
-    <hr><br/><br/>
-
+    <hr />
+    <br /><br />
 
     <section>
-        <form action="" method="POST">
-            <div>
-                <span id="item">카테고리</span><br/>
-                <label><input type="checkbox" value="app">앱</label>
-                <label><input type="checkbox" value="web" id="chk">웹</label>
-                <label><input type="checkbox" value="hardware" id="chk">하드웨어</label>
-            </div>
-            <br/>
-    
-            <div>
-                <span id="item">서비스 이름</span><br/>
-                <input type="text" id="box1" style="width: 200px; height: 25px;">
-            </div>
-            <br/>
-    
-            <div>
-                <span id="item">베타 서비스</span><span id="subitem">링크 또는 첨부 파일</span><br/>
-                <input type="text" id="box2" style="width: 400px; height: 28px;">
-            </div>
-            <br/>
-    
-            <div>
-                <span id="item">서비스 개요</span><br/>
-                <textarea id="box3" style="width: 400px; height: 50px;"></textarea>
-            </div>
-            <br/>
-    
-            <div>
-                <span id="item">서비스 설명</span><br/>
-                <textarea id="box4" style="width: 600px; height: 200px;"></textarea>
-            </div>
-            <br/>
-    
-    
-            <div>
-                <span id="item">피드백 질문</span><span id="subitem">3개 항목 선택</span><br/>
-                <label><input type="checkbox">창의성</label>
-                <label><input type="checkbox" id="chk">상업성</label>
-                <label><input type="checkbox" id="chk">실용성</label>
-                <label><input type="checkbox" id="chk">공익성</label>
-                <label><input type="checkbox" id="chk">디자인</label>
-            </div>
-            <br/><br/>
-    
-            <div>
-                <span id="item">연락처 공개 여부</span><br/>
-                <label><input type="checkbox">공개 (이메일)</label>
-            </div>
-            <br/><br/><br/>
+      <form action="" method="POST">
+        <div>
+          <span id="item">카테고리</span><br />
+          <label><input type="checkbox" value="app" />앱</label>
+          <label><input type="checkbox" value="web" id="chk" />웹</label>
+          <label
+            ><input type="checkbox" value="hardware" id="chk" />하드웨어</label
+          >
+          <label><input type="checkbox" value="others" id="chk" />기타</label>
+        </div>
+        <br />
 
-            <button type="submit">업로드</button>
-        </form>
+        <div>
+          <span id="item">서비스 이름</span><br />
+          <input type="text" id="box1" style="width: 200px; height: 25px" />
+        </div>
+        <br />
+
+        <div>
+          <span id="item">베타 서비스</span
+          ><span id="subitem">링크 또는 첨부 파일</span><br />
+          <input type="text" id="box2" style="width: 400px; height: 28px" />
+        </div>
+        <br />
+
+        <div>
+          <span id="item">서비스 개요</span><br />
+          <textarea id="box3" style="width: 400px; height: 50px"></textarea>
+        </div>
+        <br />
+
+        <div>
+          <span id="item">서비스 설명</span><br />
+          <textarea id="box4" style="width: 600px; height: 200px"></textarea>
+        </div>
+        <br />
+
+        <div>
+          <span id="item">피드백 질문</span
+          ><span id="subitem">3개 항목 선택</span><br />
+          <label><input type="checkbox" />창의성</label>
+          <label><input type="checkbox" id="chk" />상업성</label>
+          <label><input type="checkbox" id="chk" />실용성</label>
+          <label><input type="checkbox" id="chk" />공익성</label>
+          <label><input type="checkbox" id="chk" />디자인</label>
+        </div>
+        <br /><br />
+
+        <div>
+          <span id="item">연락처 공개 여부</span><br />
+          <label><input type="checkbox" />공개 (이메일)</label>
+        </div>
+        <br /><br /><br />
+
+        <button type="submit">업로드</button>
+      </form>
     </section>
 
-    <br/><br/><br/>
+    <br /><br /><br />
     <footer>
-        <div id="ftdiv">너의 생각을 밖으로 (너생밖)</div><br/>
-        <div id="parft">
-            <div id="chift">Back-End<br/>
-                김용주님(abc@gmail.com)<br/>
-                박상준님(abc@gmail.com)
-            </div>
-            <div id="chift">Front-End<br/>
-                박준희님(abc@gmail.com)<br/>
-                소연수님(abc@gmail.com)<br/>
-                황수진님(abc@gmail.com)
-            </div>
-            <div id="chift">
-                Mentor<br/>
-                홍여진님(abc@gmail.com)
-            </div>
+      <div id="ftdiv">너의 생각을 밖으로 (너생밖)</div>
+      <br />
+      <div id="parft">
+        <div id="chift">
+          Back-End<br />
+          김용주님(abc@gmail.com)<br />
+          박상준님(abc@gmail.com)
         </div>
+        <div id="chift">
+          Front-End<br />
+          박준희님(abc@gmail.com)<br />
+          소연수님(abc@gmail.com)<br />
+          황수진님(abc@gmail.com)
+        </div>
+        <div id="chift">
+          Mentor<br />
+          홍여진님(abc@gmail.com)
+        </div>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
