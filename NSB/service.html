@@ -24,17 +24,18 @@
           <div class="menu">
             <li><a href="#">SERVICE</a></li>
             <li><a href="#">IDEA</a></li>   
-            <a href="#"><i class="fa fa-bell"></i></a>
+            <a href="#"><i class="fa fa-bell" style></i></a>
             <a href="mypage.html"><i class="fa fa-user" style="font-size:18px;"></i></a>  
           </div>
         </a>
       </header>
     <hr>
 
-    <nav>
-        <span>서비스 업로드</span>
+    <nav class="nav-menu">
+        <a class="my" href="#">앱</a>
+        <a class="test" href="#">웹</a>
+        <a class="like" href="#">하드웨어</a>
     </nav>
-    <hr><br/><br/>
 
     <section>
         <div class="service">
@@ -42,16 +43,16 @@
                 <h1 id="title" >알레르기 식품 알리미 서비스</h1>
                 <p id="hashtag">#알림 #AI #알레르기 #음식 #ReactNative</p>
                 <p class="icon">
-                    <i class="fas fa-heart"><span id="iconnum">(좋아요 수)</span></i>
-                    <i class="fas fa-eye"><span id="iconnum">(조회수)</span></i>
-                    <i class="fas fa-comments"><span id="iconnum">(댓글 수)</span></i>
+                    <i class="fas fa-heart" style="color: #00047a;"><span id="iconnum">(좋아요 수)</span></i>
+                    <i class="fas fa-eye" style="color: #00047a;"><span id="iconnum">(조회수)</span></i>
+                    <i class="fas fa-comments"style="color: #00047a;"><span id="iconnum">(댓글 수)</span></i>
                 </p>
                 <hr>
             </div >
             <br>
-            <div class="contents">
-                리의 생명을 유지하도록 도와주는 먹거리가 어떤 이들에겐 생명을 위협하는 것일수도 있다면?
-
+            <div class="contents">  <!--컨텐츠 배치-->
+                우리의 생명을 유지하도록 도와주는 먹거리가 어떤 이들에겐 생명을 위협하는 것일수도 있다면?
+                <br>
                 <상황분석>
                 식품 알레르기란?
                 l 음식물을 섭취한 후 발생하는 이상반응
@@ -72,12 +73,17 @@
                 
 
             </div>
-            <hr>
-            <span id="betaguide"><strong>베타버전 링크</strong></span>&nbsp;&nbsp;
-            <a href="https://www.naver.com/" id="betaurl">www.naver.com</a>
-            <hr>
+            <div class="beta" >
+                <hr>
+                <div class="b-link">
+                    <span id="betaguide">베타버전 링크</span>&nbsp;&nbsp;
+                    <a href="https://www.naver.com/" id="betaurl">www.naver.com</a>
+                </div>
+                <hr>
+            </div>
+
             <div class="user">
-                <i class="fa fa-user" style="font-size:65px;"></i>
+                <i class="fa fa-user" style="font-size:65px; color: #00047a;"></i>
                 <div class="user-info">
                     <div name="userNickname" id="chiuser">유저</div>
                     <div name="userEmail" id="chiuser">user@user.com</div>
@@ -141,13 +147,15 @@
                     </ul>
                 </div>
             </div>
-            <button id="feedback-submit" onclick="javascript:btn()">피드백하기</button>
+          <button class="feedback-btn" onclick="javascript:btn()">피드백하기</button>
+
+            <!-- <button id="feedback-submit" onclick="javascript:btn()">피드백하기</button> -->
     </section>
     <br/><br/><br/>
 
 
     <footer>
-        <div id="ftdiv">너의 생각을 밖으로 (너생밖)</div><br/>
+        <div id="ftdiv">너의 생각을 세상 밖으로 (너생밖)</div><br/>
         <div id="parft">
             <div id="chift">Back-End<br/>
                 김용주님(abc@gmail.com)<br/>

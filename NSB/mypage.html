@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/352fde3883.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="mypage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>마이페이지</title>
+  </head>
+  <body>
+    <header class="header">
+      <div >
+          <a class="logo" href ="">너생밖<a>
+      </div>
+      <a href="#" class="navbar__toggleBtn">
+        <div class="menu">
+          <li><a href="#">SERVICE</a></li>
+          <li><a href="#">IDEA</a></li>   
+          <a href="#"><i class="fa fa-bell"></i></a>
+          <a href="mypage.html"><i class="fa fa-user" style="font-size:18px;"></i></a>  
+        </div>
+      </a>
+    </header>
+
+    <div class="background">
+      <div class="user-info">
+        <div class="icon-modify">
+          <i class="fas fa-user-alt"></i>
+          <!--user icon-->
+          <button class="modify">프로필 수정</button>
+        </div>
+        <div class="info">
+          <div class="bold name">USER NAME</div>
+          <div class="grade">
+            등급
+            <p class="bold">&nbsp;&nbsp;뉴비</p>
+          </div>
+          <div class="total-point">
+            누적 포인트
+            <p class="bold">&nbsp;&nbsp;80p</p>
+          </div>
+          <div class="required-point">스타터까지 20p</div>
+
+          <div class="progress">
+            <div class="progress-done" data-done="70">70%</div>
+          </div>
+          <div class="total-point">
+            테스트 횟수
+            <p class="bold">&nbsp;&nbsp;4</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;업로드 횟수
+            <p class="bold">&nbsp;&nbsp;2</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--서비스 카드 UI-->
+    <nav class="nav-menu">
+        <a class="my" href="#">내 서비스</a>
+        <a class="test" href="#">테스트한 서비스</a>
+        <a class="like" href="#">관심 서비스</a>
+    </nav>
+
+    <!--정렬-->
+    <div class="select">
+      <select name="format" class="format">
+         <option value="pdf">최신순 정렬</option>
+         <option value="txt">이름순 정렬</option>
+         <option value="epub">좋아요순 정렬</option>
+         <option value="fb2">조회수순 정렬</option>
+      </select>
+   </div>
+
+
+    <div class="container">
+      <div class="card" id="pick">
+        <div class="img-gradient"></div>
+        <img src="blueyellow.jpg" alt="" srcset="" />
+        <div class="text-wrap">
+          <h1>SERVICE NAME</h1>
+          <p class="user-name">user name</p>
+          <p>
+            서비스 개요 Duis interdum elit nibh. Vivamus non nu est laoreet.
+            Duis interdum elit nibh. Vivamus non nu est laoreet. Duis interdum
+            elit nibh. Vivamus non nu .
+          </p>
+          <div class="hashtag">#hash_tag #hash_tag #hash_tag</p>
+          </div>
+          <div class="service-info">
+            <div class="time">
+              31분 전
+            </div>
+            <div class="icons">
+              <i class="fas fa-heart"><span class="black">(좋아요 수)</span></i>&nbsp;&nbsp;
+              <i class="fas fa-eye"><span class="black">(조회수)</span></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="pick">
+        <div class="img-gradient"></div>
+        <img src="보라창문.png" alt="" srcset="" />
+        <div class="text-wrap">
+          <h1>SERVICE NAME</h1>
+          <p class="user-name">user name</p>
+          <p>
+            서비스 개요 Duis interdum elit nibh. Vivamus non nu est laoreet.
+            Duis interdum elit nibh. Vivamus non nu est laoreet. Duis interdum
+            elit nibh. Vivamus non nu .
+          </p>
+          <div class="hashtag">#hash_tag #hash_tag #hash_tag</p>
+          </div>
+          <div class="service-info">
+            <div class="time">
+              31분 전
+            </div>
+            <div class="icons">
+              <i class="fas fa-heart"><span class="black">(좋아요 수)</span></i>&nbsp;&nbsp;
+              <i class="fas fa-eye"><span class="black">(조회수)</span></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="pick">
+        <div class="img-gradient"></div>
+        <img src="blueyellow.jpg" alt="" srcset="" />
+        <div class="text-wrap">
+          <h1>SERVICE NAME</h1>
+          <p class="user-name">user name</p>
+          <p>
+            서비스 개요 Duis interdum elit nibh. Vivamus non nu est laoreet.
+            Duis interdum elit nibh. Vivamus non nu est laoreet. Duis interdum
+            elit nibh. Vivamus non nu .
+          </p>
+          <div class="hashtag">#hash_tag #hash_tag #hash_tag</p>
+          </div>
+          <div class="service-info">
+            <div class="time">
+              31분 전
+            </div>
+            <div class="icons">
+              <i class="fas fa-heart"><span class="black">(좋아요 수)</span></i>&nbsp;&nbsp;
+              <i class="fas fa-eye"><span class="black">(조회수)</span></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <footer>
+      <div id="ftdiv">너의 생각을 세상 밖으로 (너생밖)</div><br/>
+      <div id="parft">
+          <div id="chift">Back-End<br/>
+              김용주님(abc@gmail.com)<br/>
+              박상준님(abc@gmail.com)
+          </div>
+          <div id="chift">Front-End<br/>
+              박준희님(abc@gmail.com)<br/>
+              소연수님(abc@gmail.com)<br/>
+              황수진님(abc@gmail.com)
+          </div>
+          <div id="chift">
+              Mentor<br/>
+              홍여진님(abc@gmail.com)
+          </div>
+      </div>
+  </footer>
+  </body>
+  <script>
+    const progress = document.querySelector(".progress-done");
+
+    progress.style.width = progress.getAttribute("data-done") + "%";
+    progress.style.opacity = 1;
+  </script>
+</html>

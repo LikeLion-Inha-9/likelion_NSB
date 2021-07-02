@@ -3,35 +3,51 @@
   padding: 0;
 }
 body {
-  padding: 0 10%;
+  /* padding: 0 10%; */
   font-family: "Noto Sans KR", sans-serif;
 }
 a {
   text-decoration: none;
   color: var(--text-color);
 }
-header {
-  margin-top: 20px;
-}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: var(--background-color);
-  padding: 0 10%;
+  padding: 1% 10%;
+  background-color: #00047a;
 }
+.nav-menu {
+  padding: 10px 10%;
+  margin-bottom: 30px;
+  border-bottom: 1px rgb(196, 196, 196) solid;
+}
+nav a {
+  /* margin: 10px; */
+  color: rgb(68, 68, 68);
+  font-weight: 500;
+  padding: 10px 18px;
+}
+.my {
+  color: white;
+
+  background-color: #00047a;
+}
+
 .logo {
   font-family: "Do Hyeon", sans-serif;
   margin-left: 10px;
   font-size: 30px;
-  color: #00047a;
+  color: #ffffff;
 }
 div a,
 div i {
   font-size: 14px;
   font-weight: 700;
-  color: #00047a;
+  color: #ffffff;
   margin: 0px 12px;
 }
 div i {
@@ -45,7 +61,12 @@ div i {
 }
 
 hr {
-  color: lightgray;
+  color: #aeaeae;
+}
+
+.service,
+.feedback {
+  margin: 0 20%;
 }
 
 #title {
@@ -55,7 +76,7 @@ hr {
 .icon {
   color: #00047a;
   text-align: right;
-  margin-bottom: 8px;
+  margin: 10px 0px;
 }
 #iconnum {
   color: black;
@@ -75,6 +96,16 @@ hr {
   height: 40px;
   margin-left: 93%;
 }
+.feedback-btn {
+  font-size: 14px;
+  border: none;
+  width: 80px;
+  height: 30px;
+  margin: 2% 47%;
+  padding: 100px;
+  background-color: #00047a;
+  color: white;
+}
 
 .feedback {
   background-color: #ececec;
@@ -91,7 +122,16 @@ ul li {
   list-style: none;
 }
 
+.b-link {
+  margin: 18px 0;
+}
+
+.star {
+  margin: 0 5px;
+}
+
 .star-rating {
+  margin-left: 20px;
   display: flex;
   flex-direction: row-reverse;
   font-size: 1rem;
@@ -118,20 +158,11 @@ ul li {
   -webkit-text-fill-color: gold;
 }
 
-#userImg {
-  height: 60px;
-  width: 60px;
-  float: left;
-}
-/* .user-info {
-  margin-left: 40px;
-} */
 .user {
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 20px;
-  /* padding-bottom: 20px; */
-  font-size: 10px;
+  font-size: 12px;
 }
 .feedback {
   padding-top: 20px;
@@ -139,7 +170,7 @@ ul li {
 }
 div.criteria hr {
   width: 100px;
-  align: left; /*여기 모르겠음*/
+  /*여기 모르겠음*/
 }
 div.criteria h4 {
   margin: 0px;
@@ -169,6 +200,7 @@ div.criteria h4 {
   z-index: 0;
   padding: 0;
 }
+
 footer {
   background-color: #00047a;
   width: auto;
@@ -176,20 +208,27 @@ footer {
   color: white;
   font-weight: bold;
   font-size: 10px;
+  padding: 15px 0 40px 0;
 }
 
 #ftdiv {
+  background-color: #00047a;
+
   position: relative;
   padding-left: 100px;
   padding-top: 20px;
 }
 
 #parft {
+  background-color: #00047a;
+
   display: flex;
   margin-left: 100px;
 }
 
 #chift {
+  background-color: #00047a;
+
   flex: 1;
 }
 
@@ -229,5 +268,6 @@ footer {
 }
 
 .contents {
-  margin-bottom: 20px;
+  line-height: 200%;
+  margin-bottom: 40px;
 }
