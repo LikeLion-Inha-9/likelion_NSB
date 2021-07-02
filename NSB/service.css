@@ -6,61 +6,42 @@ body {
   padding: 0 10%;
   font-family: "Noto Sans KR", sans-serif;
 }
-
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
 header {
-  width: auto;
-  height: 47px;
-  position: relative;
+  margin-top: 20px;
 }
-
-#logo {
-  position: absolute;
-  top: 13px;
-  left: 100px;
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 0 10%;
+}
+.logo {
+  font-family: "Do Hyeon", sans-serif;
+  margin-left: 10px;
+  font-size: 30px;
   color: #00047a;
+}
+div a,
+div i {
+  font-size: 14px;
+  font-weight: 700;
+  color: #00047a;
+  margin: 0px 12px;
+}
+div i {
+  padding-top: 12px;
+}
+.menu {
   font-size: 20px;
-}
-
-#sublogo {
-  position: absolute;
-  top: 17px;
-  left: 180px;
-  color: gray;
-}
-
-#top_menu {
-  position: absolute;
-  top: 20px;
-  right: 10px;
-}
-
-#top_menu a {
-  color: #00047a;
-  margin-right: 30px;
-  text-decoration-line: none;
-}
-
-#top_menu i {
-  margin-right: 30px;
-  cursor: pointer;
-  color: #00047a;
-}
-
-.fa {
-  color: black;
-}
-
-nav span {
-  background-color: #00047a;
-  color: white;
-  font-size: 10px;
-  font-weight: bold;
-  padding: 10px 10px 10px 10px;
-  margin-left: 100px;
-}
-
-nav {
-  margin-top: -6px;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
 }
 
 hr {
@@ -74,26 +55,16 @@ hr {
 .icon {
   color: #00047a;
   text-align: right;
+  margin-bottom: 8px;
 }
 #iconnum {
   color: black;
 }
-/*input[type=submit]{
-    background-color: #00047A;
-    color:white;
-    border-radius: 5px;
-    width:80px; height:40px; 
-    float:right;
-}*/
-/*  #feedback-submit{
-    position:absolute;
-    right:0px;
-}
-*/
+
 #hashtag {
   color: gray;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #feedback-submit {
@@ -152,11 +123,14 @@ ul li {
   width: 60px;
   float: left;
 }
+/* .user-info {
+  margin-left: 40px;
+} */
 .user {
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   font-size: 10px;
 }
 .feedback {
@@ -222,7 +196,8 @@ footer {
 #shorthr {
   border-top: 3px double #bbb;
   width: 60px;
-  margin-left: 0px;
+  margin-top: 5px;
+  /* margin-left: 0px; */
 }
 
 #chiuser {
@@ -231,7 +206,7 @@ footer {
 
 .user div {
   position: relative;
-  padding-left: 70px;
+  padding-left: 13%;
 }
 
 #textareadiv {
@@ -239,10 +214,11 @@ footer {
 }
 
 .feedback-guide {
-  font-size: 18px;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 .crititle {
-  font-size: 16px;
+  font-size: 14px;
 }
 #betaguide {
   font-size: 16px;
@@ -250,4 +226,8 @@ footer {
 #betaurl {
   font-size: 16px;
   color: #585858;
+}
+
+.contents {
+  margin-bottom: 20px;
 }

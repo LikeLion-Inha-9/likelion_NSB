@@ -11,23 +11,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/352fde3883.js"crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div id="logo" style="font-weight: bold;">
-            너생밖
+    <header class="header">
+        <div >
+            <a class="logo" href ="">너생밖<a>
         </div>
-        <div id="sublogo" >
-            |    IDEA
-        </div>
-        <div id="top_menu">
-            <a href="#">SERVICE</a>
-            <a href="#">IDEA</a>
-            <i class="fa fa-bell"></i>
-            <i class="fa fa-user" style="font-size:18px;"></i>
-        </div>
-    </header>
+        <a href="#" class="navbar__toggleBtn">
+          <div class="menu">
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">IDEA</a></li>   
+            <a href="#"><i class="fa fa-bell"></i></a>
+            <a href="mypage.html"><i class="fa fa-user" style="font-size:18px;"></i></a>  
+          </div>
+        </a>
+      </header>
     <hr>
 
     <nav>
@@ -41,9 +42,9 @@
                 <h1 id="title" >알레르기 식품 알리미 서비스</h1>
                 <p id="hashtag">#알림 #AI #알레르기 #음식 #ReactNative</p>
                 <p class="icon">
-                <i class="fas fa-heart"><span id="iconnum">(좋아요 수)</span></i>&nbsp;&nbsp;
-                <i class="fas fa-eye"><span id="iconnum">(조회수)</span></i>&nbsp;&nbsp;
-                <i class="fas fa-comments"><span id="iconnum">(댓글 수)</span></i>
+                    <i class="fas fa-heart"><span id="iconnum">(좋아요 수)</span></i>
+                    <i class="fas fa-eye"><span id="iconnum">(조회수)</span></i>
+                    <i class="fas fa-comments"><span id="iconnum">(댓글 수)</span></i>
                 </p>
                 <hr>
             </div >
@@ -77,9 +78,11 @@
             <hr>
             <div class="user">
                 <i class="fa fa-user" style="font-size:65px;"></i>
-                <div name="userNickname" id="chiuser">유저</div>
-                <div name="userEmail" id="chiuser">user@user.com</div>
-                <div name="grade" id="chiuser">등급</div>
+                <div class="user-info">
+                    <div name="userNickname" id="chiuser">유저</div>
+                    <div name="userEmail" id="chiuser">user@user.com</div>
+                    <div name="grade" id="chiuser">등급</div>
+                </div>
             </div>
             </div>  
             <div class="feedback">      
