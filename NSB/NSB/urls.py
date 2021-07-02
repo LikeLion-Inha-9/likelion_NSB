@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-<<<<<<< HEAD
 from myapp import views
 
 #id이런 값을 html에서 받을때 받아야함 그래야 view에 있는 함수들을 실행할 수 있다

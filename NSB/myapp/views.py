@@ -181,7 +181,7 @@ def idea_read(req, i_id):
     context = {
         'data' : idea,
         'comments' : comments,
-        'current_user' : current_user,
+        'current_user' : current_user.id,
     }
     return render(req,'Idea_upload/idea_read.html', context)
 
@@ -225,3 +225,5 @@ def idea_comment_delete(req, idea_upload_id,c_id):
     comment = get_object_or_404(Idea_evalu_comment, pk = c_id)
     comment.delete()
     return redirect('/idea/'+str(idea_upload_id))
+
+    
