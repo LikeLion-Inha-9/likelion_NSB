@@ -104,7 +104,14 @@ l 식품 알레르기를 가지고 있는 사람들, 피해야하는 음식이 �
                     <span class="feedback-guide">서비스의 피드백을 남겨주세요</span>
                     {% endif %}
                     {% if tester %}
-                    <span class="feedback-guide">해당 서비스에 대한 유저들의 피드백 결과입니다.</span>
+                        
+                    <span class="feedback-guide">해당 서비스에 대한 유저들의 피드백 결과입니다.
+                        {{data.grade1}}
+                        {% if data.grade1 == 3 %}
+                            {{data.grade1}}
+                        {% endif %}
+                        {{data.grade2}}
+                        {{data.grade3}}</span>
                     {% endif %}
                     <form method="post" action ="{% url 's_evalu_create' data.s_id %}">
                         {% csrf_token %}
@@ -112,16 +119,18 @@ l 식품 알레르기를 가지고 있는 사람들, 피해야하는 음식이 �
                         <hr id="shorthr">
                         <span class="crititle" id="c1">{{data.get_evalu1_display}}</span><br>
                         <div class="star-rating space-x-4 mx-auto">
-                            <input type="radio" id="5-stars1" name="rating" value="5" v-model="ratings"/>
-                            <label for="5-stars1" class="star pr-4">★</label>
-                            <input type="radio" id="4-stars1" name="rating" value="4" v-model="ratings"/>
-                            <label for="4-stars1" class="star">★</label>
-                            <input type="radio" id="3-stars1" name="rating" value="3" v-model="ratings"/>
-                            <label for="3-stars1" class="star">★</label>
-                            <input type="radio" id="2-stars1" name="rating" value="2" v-model="ratings"/>
-                            <label for="2-stars1" class="star">★</label>
-                            <input type="radio" id="1-star1" name="rating" value="1" v-model="ratings" />
-                            <label for="1-star1" class="star">★</label>
+                           
+                                <input type="radio" id="5-stars1" name="rating" value="5" v-model="ratings"/>
+                                <label for="5-stars1" class="star pr-4">★</label>
+                                <input type="radio" id="4-stars1" name="rating" value="4" v-model="ratings"/>
+                                <label for="4-stars1" class="star">★</label>
+                                <input type="radio" id="3-stars1" name="rating" value="3" v-model="ratings"/>
+                                <label for="3-stars1" class="star">★</label>
+                                <input type="radio" id="2-stars1" name="rating" value="2" v-model="ratings"/>
+                                <label for="2-stars1" class="star">★</label>
+                                <input type="radio" id="1-star1" name="rating" value="1" v-model="ratings" />
+                                <label for="1-star1" class="star">★</label>
+                         
                         </div>
                         <br>
         
@@ -159,7 +168,7 @@ l 식품 알레르기를 가지고 있는 사람들, 피해야하는 음식이 �
                         <br>
                         {% if not tester %} 
                             <span class="crititle" id="c4">기타 피드백</span>
-                                <div><input type="textarea" name="content"></div>
+                                <div><textarea name="content" style="width: 600px; height: 200px;"></textarea></div>
                     </ul>
                 </div>
                 <button type="submit" class="feedback-btn">피드백하기</button>

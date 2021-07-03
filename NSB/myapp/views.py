@@ -105,9 +105,25 @@ def service_read(req,id):
     service = get_object_or_404(Service_upload,pk=id)
     user_pk = req.session.get('user')
     tester=Service_evalu_upload.objects.filter(user_id=user_pk, service_upload_id=id)  
+    current_user=User.objects.get(pk=user_pk)
+    cnt=0
+    if(tester):
+       results=Service_evalu_upload.objects.filter(service_upload_id=id)
+       for result in results:
+           service.grade1+=result.grade1
+           service.grade2+=result.grade2
+           service.grade3+=result.grade3
+           cnt+=1
+
+    if(tester):
+        service.grade1/=cnt
+        service.grade2/=cnt
+        service.grade3/=cnt
+
     context = {
         'data' : service,
         'tester' : tester,
+        'writer' : current_user,
     }
     return render(req,'Service_upload/service_read.html',context)
                                                                                 #service

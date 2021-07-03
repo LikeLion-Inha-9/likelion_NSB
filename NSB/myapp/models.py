@@ -42,7 +42,9 @@ class Service_upload (TimeStampModel):
     evalu2 = models.IntegerField(choices=Evaluation_Standard)
     evalu3 = models.IntegerField(choices=Evaluation_Standard)
     user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자") # 비식별관계
-    
+    grade1 = models.IntegerField(default=0)
+    grade2 = models.IntegerField(default=0)
+    grade3=models.IntegerField(default=0)
     # date값을 TimeStampModel을 상속하므로 해결
 
 class Idea_upload(TimeStampModel):
