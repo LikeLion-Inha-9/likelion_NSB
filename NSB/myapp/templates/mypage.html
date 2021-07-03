@@ -87,7 +87,7 @@
     {% for service in services %}
       <div class="card" id="pick">
         <div class="img-gradient"></div>
-        <img src="blueyellow.jpg" alt="" srcset="" />
+        <img src="{% static 'blueyellow.jpg' %}" alt="" srcset="" />
         <div class="text-wrap">
           <h1>{{service.title}}</h1>
           <p class="user-name">{{service.user_id.name}}</p>

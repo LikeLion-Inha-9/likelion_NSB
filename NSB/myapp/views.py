@@ -14,9 +14,11 @@ def home(req):
     user=User.objects.all()
     services=Service_upload.objects.all()
     ideas=Idea_upload.objects.all()
+    user_pk = req.session.get('user')
     context = {
         'services' : services,
         'ideas' : ideas,
+        'user_pk' : user_pk,
     }
     return render(req, 'home.html',context)
 
@@ -101,8 +103,11 @@ def service_create(req):
 
 def service_read(req,id):
     service = get_object_or_404(Service_upload,pk=id)
+    user_pk = req.session.get('user')
+    tester=Service_evalu_upload.objects.filter(user_id=user_pk, service_upload_id=id)  
     context = {
         'data' : service,
+        'tester' : tester,
     }
     return render(req,'Service_upload/service_read.html',context)
                                                                                 #service
@@ -116,19 +121,17 @@ def s_evalu_create(req,s_id):
     elif user_pk:
         if req.method == 'POST':
             s_evalu = Service_evalu_upload()
-            s_evalu.title = req.POST['title']
             s_evalu.content = req.POST['content']
-            s_evalu.grade1 = float(req.POST['grade1'])
-            s_evalu.grade2 = float(req.POST['grade2'])
-            s_evalu.grade3 = float(req.POST['grade3'])
+            s_evalu.grade1 = float(req.POST['rating'])
+            s_evalu.grade2 = float(req.POST['rating2'])
+            s_evalu.grade3 = float(req.POST['rating3'])
             # user, service_upload의 foreign key이기때문에 둘다 무조건 이렇게 가져와야함
             user = User.objects.get(pk=user_pk)
             service = Service_upload.objects.get(pk=s_id)
             s_evalu.service_upload_id = service
             s_evalu.user_id = user
             s_evalu.save()
-            return redirect('/service/'+str(s_id)+'/evalu/'+str(s_evalu.e_id))
-    return render(req,'Service_evaluation/s_evalu_create.html')
+            return service_read(req,s_id)
     
 def s_evalu_read(req,s_id,e_id):
     s_evalu = get_object_or_404(Service_evalu_upload,pk=e_id)
@@ -155,13 +158,6 @@ def s_evalu_comment_create(req,service_upload_id,e_id):
             service_evalu_upload_id=evalu,service_upload_id = service)
             return redirect('/service/'+str(s_id[0])+'/evalu/'+str(s_evalu.e_id))
     return render(req,'Service_evaluations/s_evalu_read.html')
-
-def service_read(req,id):
-    service = get_object_or_404(Service_upload,pk=id)
-    context = {
-        'data' : service
-    }
-    return render(req,'Service_upload/service_read.html',context)
 
 def idea_create(req):
     user_pk = req.session.get('user')

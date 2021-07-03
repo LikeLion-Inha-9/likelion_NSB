@@ -81,7 +81,6 @@ class Service_evalu_upload(TimeStampModel):
         else:
             return no + 1
     e_id = models.IntegerField(primary_key=True,unique= True,default=number)
-    title = CharField(max_length=50)
     content = TextField()
     user_id = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name="작성자")
     grade1 = models.FloatField(default=0.0)

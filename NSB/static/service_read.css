@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    /* padding: 0 10%; */
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 1% 10%;
+    background-color: #00047a;
+  }
+  .nav-menu {
+    padding: 10px 10%;
+    margin-bottom: 30px;
+    border-bottom: 1px rgb(196, 196, 196) solid;
+  }
+  nav a {
+    /* margin: 10px; */
+    color: rgb(68, 68, 68);
+    font-weight: 500;
+    padding: 10px 18px;
+  }
+  .my {
+    color: white;
+  
+    background-color: #00047a;
+  }
+  
+  .logo {
+    font-family: "Do Hyeon", sans-serif;
+    margin-left: 10px;
+    font-size: 30px;
+    color: #ffffff;
+  }
+  div a,
+  div i {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0px 12px;
+  }
+  div i {
+    padding-top: 12px;
+  }
+  .menu {
+    font-size: 20px;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  hr {
+    color: #aeaeae;
+  }
+  
+  .service,
+  .feedback {
+    margin: 0 20%;
+  }
+  
+  #title {
+    text-align: center;
+    font-size: 30px;
+  }
+  .icon {
+    color: #00047a;
+    text-align: right;
+    margin: 10px 0px;
+  }
+  #iconnum {
+    color: black;
+  }
+  
+  #hashtag {
+    color: gray;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  #feedback-submit {
+    background-color: #00047a;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    margin-left: 93%;
+  }
+  .feedback-btn {
+    font-size: 14px;
+    border: none;
+    font-weight: 700;
+    margin: 2% 46%;
+    padding: 10px;
+    background-color: #00047a;
+    color: white;
+    cursor: pointer;
+  }
+  .feedback {
+    background-color: #ececec;
+    height: auto;
+    padding-bottom: 100px;
+  }
+  textarea {
+    width: 600px;
+    height: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  ul li {
+    list-style: none;
+  }
+  
+  .b-link {
+    margin: 18px 0;
+  }
+  
+  .star {
+    margin: 0 5px;
+  }
+  
+  .star-rating {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    width: 5em;
+  }
+  .star-rating input {
+    display: none;
+  }
+  .star-rating label {
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #2b2a29;
+    cursor: pointer;
+  }
+  .star-rating :checked ~ label {
+    -webkit-text-fill-color: gold;
+  }
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    -webkit-text-fill-color: gold;
+  }
+  
+  .user {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    font-size: 12px;
+  }
+  .feedback {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  div.criteria hr {
+    width: 100px;
+    /*여기 모르겠음*/
+  }
+  div.criteria h4 {
+    margin: 0px;
+  }
+  
+  .star-ratings {
+    color: #aaa9a9;
+    position: relative;
+    unicode-bidi: bidi-override;
+    width: max-content;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #2b2a29;
+  }
+  .star-ratings-fill {
+    color: #fff58c;
+    padding: 0;
+    position: absolute;
+    z-index: 1; /*기본 star위에 겹쳐올리기*/
+    display: flex;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-text-fill-color: gold;
+    /* margin: 0 3px; */
+  }
+  .star-ratings-base {
+    z-index: 0;
+    padding: 0;
+  }
+  
+  footer {
+    background-color: #00047a;
+    width: auto;
+    height: 120px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 15px 0 40px 0;
+  }
+  
+  #ftdiv {
+    background-color: #00047a;
+  
+    position: relative;
+    padding-left: 100px;
+    padding-top: 20px;
+  }
+  
+  #parft {
+    background-color: #00047a;
+  
+    display: flex;
+    margin-left: 100px;
+  }
+  
+  #chift {
+    background-color: #00047a;
+  
+    flex: 1;
+  }
+  
+  #shorthr {
+    border-top: 3px double #bbb;
+    width: 60px;
+    margin-top: 5px;
+    /* margin-left: 0px; */
+  }
+  
+  #chiuser {
+    bottom: 53px;
+  }
+  
+  .user div {
+    position: relative;
+    padding-left: 13%;
+  }
+  
+  #textareadiv {
+    margin-top: 10px;
+  }
+  
+  .feedback-guide {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .crititle {
+    font-size: 14px;
+  }
+  #betaguide {
+    font-size: 16px;
+  }
+  #betaurl {
+    font-size: 16px;
+    color: #585858;
+  }
+  
+  .contents {
+    line-height: 200%;
+    margin-bottom: 40px;
+  }
+  
+  pre {
+    font-family: "Noto Sans KR", sans-serif;
+    padding: 10px;
+    overflow: auto;
+    white-space: pre-wrap; /* pre tag내에 word wrap */
+  }
