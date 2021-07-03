@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서비스 상세(서비스 이름)</title>
+    <link rel="stylesheet" href="{% static 'service_read.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/icons/fontawesome5_icons_users_people.asp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/352fde3883.js"crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div >
+            <a class="logo" href ="">너생밖<a>
+        </div>
+        <a href="#" class="navbar__toggleBtn">
+          <div class="menu">
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">IDEA</a></li>   
+            <a href="#"><i class="fa fa-bell" style></i></a>
+            <a href="{% url 'mypage' %}"><i class="fa fa-user"></i></a>  
+          </div>
+        </a>
+      </header>
+    <hr>
+
+    <nav class="nav-menu">
+        <a class="my" href="#">앱</a>
+        <a class="test" href="#">웹</a>
+        <a class="like" href="#">하드웨어</a>
+    </nav>
+
+    <section>
+        <div class="service">
+            <div class="head">
+                <!--서비스 타이틀-->
+                <h1 id="title" name="title" >{{data.title}}</h1>
+                <p id="hashtag" name="hashtag">#알림 #AI #알레르기 #음식 #ReactNative</p>
+                <p class="icon">
+                    <i class="fas fa-heart" style="color: #00047a;"><span id="iconnum">(좋아요 수)</span></i>
+                    <i class="fas fa-eye" style="color: #00047a;"><span id="iconnum">(조회수)</span></i>
+                    <i class="fas fa-comments"style="color: #00047a;"><span id="iconnum">(댓글 수)</span></i>
+                </p>
+                <hr>
+            </div >
+            <br>
+            <!--서비스 컨텐츠-->
+            <div class="contents">
+                <pre name="content" class="content">
+우리의 생명을 유지하도록 도와주는 먹거리가 어떤 이들에겐 생명을 위협하는 것일수도 있다면?
+
+<상황분석>
+식품 알레르기란?
+l 음식물을 섭취한 후 발생하는 이상반응
+l 기침, 아토피피부염, 천식, 두드러기, 그리고 심한경우 알레르기 쇼크를 유발해 목숨을 잃을 위험이 있음
+l 가장 좋은 예방법: 알레르기를 유발하는 음식과 교차반응이 일어날 수 있는 같은 군의 식품을 피하는 것
+l 이를 위해 가공식품까지 원재료를 꼼꼼히 파악하는 습관이 매우 중요
+그렇다면, 가공식품에는 원재료가 어떻게 표시되어있을까?
+
+<문제 도출>
+현재 가공식품에 표시되어 있는 식품정보는 포장용기의 크기, 재질 또는 작은 글자 때문에 가독성이 매우 떨어짐
+l 소비자원이 밝힌 바에 따르면 2015년~2017년에 한국소비자원 소비자위해감시시스템에 접수된 식품 알레르기 관련 사고는 총 1853건으로, 특히 2017년에는 835건이 접수되어 2015년(419건) 에 비해 약 2배 증가했다.
+l 한국소비자원 관계자는 "부모 이외 돌봄교사나 알레르기 질환이 있는 어린이도 알레르기 정보를 쉽게 확인하고 주의를 기울일 수 있도록 알레르기 유발물질 표시방법을 개선할 필요가 있다"며 "식품 알레르기 질환자 및 보호자에게 제품 구입 시 알레르기 유발물질 포함 여부를 꼼꼼히 확인
+해야한다"고 당부했다. (출처: 중앙일보 "한국소비자원 식품 알레르기 피해 2년새 2배... 영유아 어린이 사고 많아)
+
+<타겟분석/컨셉도출>
+l 식품 알레르기를 가지고 있는 사람들, 피해야하는 음식이 있는 사람들, 그리고 이들을 돌보고 있는
+사람들이 조금 더 편하고 걱정없는 식사를 할 수 있게 도와주자!
+                </pre>
+
+            </div>
+            <!--베타버전 링크(service)-->
+            <div class="beta" >
+                <hr>
+                <div class="b-link">
+                    <span id="betaguide" name="service">{{data.service}}</span>&nbsp;&nbsp;
+                    <a href="https://www.naver.com/" id="betaurl">www.naver.com</a>
+                </div>
+                <hr>
+            </div>
+
+            <div class="user">
+                <i class="fa fa-user" style="font-size:65px; color: #00047a;"></i>
+                <div class="user-info">
+
+                    <!--User info-->
+                    <div name="nickname" id="chiuser">{{writer.nickname}}</div>
+                    <div name="email" id="chiuser">{{writer.email}}</div>
+                    <div name="level" id="chiuser">{{writer.level}}</div>
+                </div>
+            </div>
+            </div>  
+            <div class="feedback">      
+                    <span class="feedback-guide">서비스의 피드백을 남겨주세요</span>
+                    <div class="criteria">
+                        <hr id="shorthr">
+                        <span class="crititle" id="c1">{{data.get_evalu1_display}}</span><br>
+                        <div class="star-rating space-x-4 mx-auto">
+                            <input type="radio" id="5-stars1" name="rating" value="5" v-model="ratings"/>
+                            <label for="5-stars1" class="star pr-4">★</label>
+                            <input type="radio" id="4-stars1" name="rating" value="4" v-model="ratings"/>
+                            <label for="4-stars1" class="star">★</label>
+                            <input type="radio" id="3-stars1" name="rating" value="3" v-model="ratings"/>
+                            <label for="3-stars1" class="star">★</label>
+                            <input type="radio" id="2-stars1" name="rating" value="2" v-model="ratings"/>
+                            <label for="2-stars1" class="star">★</label>
+                            <input type="radio" id="1-star1" name="rating" value="1" v-model="ratings" />
+                            <label for="1-star1" class="star">★</label>
+                        </div>
+                        <br>
+        
+                        <hr id="shorthr">
+                        <span class="crititle" id="c2">{{data.get_evalu2_display}}</span><br>   
+                        <div class="star-rating space-x-4 mx-auto">
+                            <input type="radio" id="5-stars2" name="rating2" value="5" v-model="ratings"/>
+                            <label for="5-stars2" class="star pr-4">★</label>
+                            <input type="radio" id="4-stars2" name="rating2" value="4" v-model="ratings"/>
+                            <label for="4-stars2" class="star">★</label>
+                            <input type="radio" id="3-stars2" name="rating2" value="3" v-model="ratings"/>
+                            <label for="3-stars2" class="star">★</label>
+                            <input type="radio" id="2-stars2" name="rating2" value="2" v-model="ratings"/>
+                            <label for="2-stars2" class="star">★</label>
+                            <input type="radio" id="1-star2" name="rating2" value="1" v-model="ratings" />
+                            <label for="1-star2" class="star">★</label>
+                        </div>
+                        <br>
+        
+                        <hr id="shorthr">
+                        <span class="crititle" id="c3">{{data.get_evalu3_display}}</span><br>
+                        <div class="star-rating space-x-4 mx-auto">
+                            <input type="radio" id="5-stars3" name="rating3" value="5" v-model="ratings"/>
+                            <label for="5-stars3" class="star pr-4">★</label>
+                            <input type="radio" id="4-stars3" name="rating3" value="4" v-model="ratings"/>
+                            <label for="4-stars3" class="star">★</label>
+                            <input type="radio" id="3-stars3" name="rating3" value="3" v-model="ratings"/>
+                            <label for="3-stars3" class="star">★</label>
+                            <input type="radio" id="2-stars3" name="rating3" value="2" v-model="ratings"/>
+                            <label for="2-stars3" class="star">★</label>
+                            <input type="radio" id="1-star3" name="rating3" value="1" v-model="ratings" />
+                            <label for="1-star3" class="star">★</label>
+                        </div>
+                        <br>
+                        <br>
+                            <span class="crititle" id="c4">기타 피드백</span>
+                                <div><textarea></textarea></div>
+                    </ul>
+                </div>
+            </div>
+          <button class="feedback-btn" onclick="javascript:btn()">피드백하기</button>
+
+    </section>
+    <br/><br/><br/>
+
+
+    <footer>
+        <div id="ftdiv">너의 생각을 세상 밖으로 (너생밖)</div><br/>
+  
+        <div class="footer">
+          <div id="parft">
+              <div id="chift">Back-End<br/>
+                  김용주(dydrkfsla98@naver.com)<br/>
+                  박상준(pcpark98@naver.com)
+              </div>
+              <div id="chift">Front-End<br/>
+                  소연수(janu10.sys@gmail.com)<br/>
+                  박준희(qaz74792@gmail.com)<br/>
+                  황수진(sara5885@naver.com)
+              </div>
+              <div id="chift">
+                  Mentor<br/>
+                  홍여진(hgo641@gmail.com)
+              </div>
+          </div>
+        </div>
+    </footer>
+    <script>
+        function btn(){
+           var submit = confirm("입력하시겠습니까?");
+           if(submit==true){
+               location.href="s_evalu_create.html"; 
+           }
+        }
+    </script>
+</body>
+</html>
