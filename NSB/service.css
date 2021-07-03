@@ -275,4 +275,7 @@ footer {
 
 pre {
   font-family: "Noto Sans KR", sans-serif;
+  padding: 10px;
+  overflow: auto;
+  white-space: pre-wrap; /* pre tag내에 word wrap */
 }
