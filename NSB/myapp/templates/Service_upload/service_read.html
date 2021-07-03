@@ -171,10 +171,13 @@ l 식품 알레르기를 가지고 있는 사람들, 피해야하는 음식이 �
                                 <div><textarea name="content" style="width: 600px; height: 200px;"></textarea></div>
                     </ul>
                 </div>
-                <button type="submit" class="feedback-btn">피드백하기</button>
                 {% endif %}
-            </form>
             </div>
+            {% if not tester %} 
+            <button type="submit" class="feedback-btn">피드백하기</button>
+            {% endif %}
+            </form>
+            
     </section>
     <br/><br/><br/>
 
